@@ -123,4 +123,59 @@ body, html {
     .ipsSpacer_bottom_double{
       flex-direction: column;
     }
+    .header-section.gs_reveal.ipsType_center{
+      margin-bottom: 10%;
+    }
+  
+  }
+  @media screen and (max-width:800px){
+    .ipsGrid {
+      display: inline-block;
+      display: -ms-flexbox;
+      display: flex;
+      flex-flow: column;
+      
+    }
+    .ipsGrid::before, .ipsGrid::after {
+      display: table;
+      content: "";
+      line-height: 0;
+    }
+    .ipsGrid > [class*="ipsGrid_span"] {
+      display: block;
+      width: 100%;
+      min-height: 30px;
+      box-sizing:border-box;
+    }
+    .ipsGrid > .ipsGrid_span5 {
+      width: 40.42553191489362%;
+    }
+    .ipsGrid > .ipsGrid_span7 {
+      width: 57.44680851063829%;
+    }
+    .ipsGrid > [class*="ipsGrid_span"] {
+      float: left;
+      margin-left: 2%;
+    }
+    .ipsGrid > [class*="ipsGrid_span"]:first-child {
+      margin-left: 0;
+    }
+    .featured-image-container .card {
+      margin-left: -50px ;
+      padding: 10px;
+      height: 0;
+      padding-bottom: calc(200% - 55%);
+
+    }
+    .card {
+      width: 150%;
+      height: 150%;
+      margin-bottom: 30px;
+      border: 1px solid #cccccc;
+      border-radius: 8px;
+      overflow:visible;
+      background: #ffffff;
+      box-shadow: 1px 1px 5px 1px #CCCCCC;
+    /*   transition: 0.3s; */
+    }
   }
