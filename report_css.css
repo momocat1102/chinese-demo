@@ -112,3 +112,15 @@ body, html {
     visibility: hidden;
     will-change: transform, opacity;
   }
+  @media(max-width: 768px){
+    .ipsGrid{
+      flex-direction: column;
+
+    }
+    .feature{
+      flex-direction: column;
+    }
+    .ipsSpacer_bottom_double{
+      flex-direction: column;
+    }
+  }
