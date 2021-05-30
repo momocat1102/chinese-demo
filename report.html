@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<title></title>
+<title>船山景點介紹</title>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -37,7 +37,6 @@
         <div class="w3-dropdown-content w3-card-4 w3-bar-block">
           <a href="#6" class="w3-bar-item w3-button">醒靈寺</a>
           <a href="#7" class="w3-bar-item w3-button">大馬璘遺址公園</a>
-          <a href="#8" class="w3-bar-item w3-button">埔里基督教醫院</a>
           <a href="#9" class="w3-bar-item w3-button">暨大附中</a>
           <a href="#10" class="w3-bar-item w3-button">埔基長照中心</a>
           <a href="#11" class="w3-bar-item w3-button">愛蘭國小</a>
@@ -59,7 +58,7 @@
           <a href="#22" class="w3-bar-item w3-button">船尾—地質露頭</a>
         </div>
       </div>
-      <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-question"></i> 問題</a>
+      <a href="./photo.html" class="w3-bar-item w3-button"><i class="fa fa-photo"></i> 景點賞析</a>
     </div>
     <!-- Hide right-floated links on small screens and replace them with a menu icon -->
 
@@ -71,22 +70,21 @@
 </div>
 
 <!-- Sidebar on small screens when clicking the menu icon -->
-<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
-  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
-  <a onclick="myAccFunc1()" href="javascript:void(0)" class="w3-bar-item w3-button" >
+<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar" >
+  <a onclick="myAccFunc1(),check(1)"  href="javascript:void(0)" class="w3-bar-item w3-button" >
     南村區<i class="fa fa-caret-down"></i>
   </a>
-  <div id="demo1" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+  <div id="demo1" onclick="w3_close()" class="w3-bar-block w3-hide w3-padding-large w3-medium">
     <a href="#1" class="w3-bar-item w3-button">烏牛欄橋</a>
     <a href="#2" class="w3-bar-item w3-button">烏牛欄戰役紀念碑</a>
     <a href="#3" class="w3-bar-item w3-button">木生昆蟲博物館</a>
     <a href="#4" class="w3-bar-item w3-button">牛耳石雕公園</a>
     <a href="#5" class="w3-bar-item w3-button">南村里義民祠</a>
   </div>
-  <a onclick="myAccFunc2()" href="javascript:void(0)" class="w3-bar-item w3-button" >
+  <a onclick="myAccFunc2(), check(2)"  href="javascript:void(0)" class="w3-bar-item w3-button" >
     大馬璘與烏牛欄區<i class="fa fa-caret-down"></i>
   </a>
-  <div id="demo2" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+  <div id="demo2" onclick="w3_close()"  class="w3-bar-block w3-hide w3-padding-large w3-medium">
     <a href="#6" class="w3-bar-item w3-button">醒靈寺</a>
     <a href="#7" class="w3-bar-item w3-button">大馬璘遺址公園</a>
     <a href="#8" class="w3-bar-item w3-button">埔里基督教醫院</a>
@@ -96,10 +94,10 @@
     <a href="#12" class="w3-bar-item w3-button">梅村社造土角胖</a>
     <a href="#13" class="w3-bar-item w3-button">烏牛欄教會</a>
   </div>
-  <a onclick="myAccFunc3()" href="javascript:void(0)" class="w3-bar-item w3-button" >
+  <a onclick="myAccFunc3(), check(3)" href="javascript:void(0)" class="w3-bar-item w3-button" >
     阿里史區<i class="fa fa-caret-down"></i>
   </a>
-  <div id="demo3" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+  <div id="demo3" onclick="w3_close()"  class="w3-bar-block w3-hide w3-padding-large w3-medium">
     <a href="#14" class="w3-bar-item w3-button">廣興紙寮</a>
     <a href="#15" class="w3-bar-item w3-button">西鎮堂</a>
     <a href="#16" class="w3-bar-item w3-button">烏牛欄手作巧克力花園</a>
@@ -110,7 +108,7 @@
     <a href="#21" class="w3-bar-item w3-button">天雷宮</a>
     <a href="#22" class="w3-bar-item w3-button">船尾—地質露頭</a>
   </div>
-  <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">問題</a>
+  <a href="./photo.html" class="w3-bar-item w3-button"><i class="fa fa-photo"></i> 景點賞析</a>
 </nav>
 
 <!-- Header with full-height image -->
@@ -135,13 +133,13 @@
 <div class="cInnerContent" >
   
 
-  <div class="features" >
+  <div class="features" onclick="w3_close()">
     <!-------------南村區(1.烏牛欄橋)--------------------->
-    <h1 class="header-section gs_reveal ipsType_center" id="1"><a href="https://zh.wikipedia.org/wiki/%E7%83%8F%E7%89%9B%E6%AC%84%E4%B9%8B%E5%BD%B9" target="_blank">烏牛欄橋</a></h1>
+    <h1 class="header-section ipsType_center" id="1"><a href="https://zh.wikipedia.org/wiki/%E7%83%8F%E7%89%9B%E6%AC%84%E4%B9%8B%E5%BD%B9" target="_blank">烏牛欄橋</a></h1>
     <div class="feature ipsSpacer_bottom_double ipsGrid ipsGrid_collapsePhone" >
       <div class="featured-image-container ipsGrid_span5 gs_reveal gs_reveal_fromLeft">
         <div class="card">
-          <img width="479" src="https://picsum.photos/479/479?index=1" alt="">
+          <img width="479" src="./船山照片/愛蘭橋.jpg" alt="">
         </div>
       </div>
 
@@ -150,7 +148,7 @@
       </div>
     </div>
     <!--------------南村區(2.烏牛欄戰役紀念碑)------------------->
-    <h1 class="header-section gs_reveal ipsType_center" id="2">烏牛欄戰役紀念碑</h1>
+    <h1 class="header-section ipsType_center" id="2">烏牛欄戰役紀念碑</h1>
     <div class="feature ipsSpacer_bottom_double ipsGrid ipsGrid_collapsePhone" >
       <div class="ipsGrid_span7 ipsType_right">
         <p class="gs_reveal">此碑為民國93年(2004)由時任南投縣長林宗男，為紀念二二八事件中的烏牛欄之役所立，並被命為「圓而不圓」，雕刻者為白滄沂，其造型特殊，是個原創於一節枯木之銅塑作品，作品中樹木的年輪意涵深遠，象徵雖有破損卻也圓，指的是二二八事件是個不圓滿的事件，卻希望它能有個種族融合相互寬容的圓滿結局，同時作品從另一角度亦可解讀成不圓而圓，意思是事件雖然圓滿落幕，卻是個歷史悲劇，不必誇大卻也不能忘記這個傷痛的教訓。</p>
@@ -158,16 +156,16 @@
 
       <div class="featured-image-container ipsGrid_span5 gs_reveal gs_reveal_fromRight">
         <div class="card">
-          <img width="479" src="https://picsum.photos/479/479?index=2" alt="">
+          <img width="479" src="./船山照片/愛蘭戰役紀念碑.jpg" alt="">
         </div>
       </div>
     </div>
     <!------------南村區(3.木生昆蟲博物館)--------------------->
-    <h1 class="header-section gs_reveal ipsType_center" id="3">木生昆蟲博物館</h1>
+    <h1 class="header-section ipsType_center" id="3">木生昆蟲博物館</h1>
     <div class="feature ipsSpacer_bottom_double ipsGrid ipsGrid_collapsePhone" >
       <div class="featured-image-container ipsGrid_span5 gs_reveal gs_reveal_fromLeft">
         <div class="card">
-          <img width="479" src="https://picsum.photos/479/479?index=3" alt="">
+          <img width="479" src="./船山照片/木生昆蟲博物館.jpg" alt="">
         </div>
       </div>
 
@@ -176,7 +174,7 @@
       </div>
     </div>
         <!----------南村區(4.牛耳石雕公園)------------------------->
-    <h1 class="header-section gs_reveal ipsType_center" id="4">牛耳石雕公園</h1>
+    <h1 class="header-section ipsType_center" id="4">牛耳石雕公園</h1>
     <div class="feature ipsSpacer_bottom_double ipsGrid ipsGrid_collapsePhone" >
       <div class="ipsGrid_span7 ipsType_right">
         <p class="gs_reveal">牛耳石雕公園為黃炳松先生於民國76年(1987)所創辦，為亞洲首座素人雕塑林園，近年來已轉型為休閒渡假村，園內之石雕作品以林淵之作品，亦有少數朱銘及楊英風之作品，除是室外展示外亦有林淵美術館、地震紀念館、兒童美術教室、童玩廣場及鄉土文物展示區等，據創辦人所述，名為牛耳之原因為，台灣三位名雕刻家，朱銘、林淵、楊英風生肖都屬牛，他們共為台灣藝術創作努力，希望執雕刻藝術之牛耳，石雕公園因而以此為名。</p>
@@ -184,16 +182,16 @@
 
       <div class="featured-image-container ipsGrid_span5 gs_reveal gs_reveal_fromRight">
         <div class="card">
-          <img width="479" src="https://picsum.photos/479/479?index=4" alt="">
+          <img width="479" src="./船山照片/牛耳石雕公園（牛相觸堤防）.jpg" alt="">
         </div>
       </div>
     </div>
     <!-----------南村區(5.南村里義民祠)----------------------->
-    <h1 class="header-section gs_reveal ipsType_center" id="5">南村里義民祠</h1>
+    <h1 class="header-section ipsType_center" id="5">南村里義民祠</h1>
     <div class="feature ipsSpacer_bottom_double ipsGrid ipsGrid_collapsePhone" >
       <div class="featured-image-container ipsGrid_span5 gs_reveal gs_reveal_fromLeft">
         <div class="card">
-          <img width="479" src="https://picsum.photos/479/479?index=1" alt="">
+          <img width="479" src="./船山照片/義民祠_自由時報.jpg" alt=""><!---https://news.ltn.com.tw/news/life/breakingnews/2989520-->
         </div>
       </div>
 
@@ -202,7 +200,7 @@
       </div>
     </div>
     <!----------大馬璘與烏牛欄區(6.醒靈寺)------------------------>
-    <h1 class="header-section gs_reveal ipsType_center" id="6">醒靈寺</h1>
+    <h1 class="header-section ipsType_center" id="6">醒靈寺</h1>
     <div class="feature ipsSpacer_bottom_double ipsGrid ipsGrid_collapsePhone" >
       <div class="ipsGrid_span7 ipsType_right">
         <p class="gs_reveal">醒靈寺位於愛蘭臺地東緣，創建於民國40年(1951)，是埔里重要的鸞堂廟宇，主祀三恩主，農曆每月初3、13、23日為乩日，晚上有扶鸞降筆活動。醒靈寺的前身是日南的「解化堂(改化堂)」、「醒化堂」，創建於日治時期大正6年(1917)。戰後初期，民國36年(1947)農曆3月遶境過程，聖駕行到烏牛欄吊橋（今愛蘭橋）時，先鋒太子元帥之輦轎忽然起駕，衝過吊橋直奔至今廟址，次年(1948)信眾籌劃遷建於今廟址，公推許清和、張以時、王進發、陳石鍊等地方賢達為召集人，38年(1949)成立建寺董事會，公推許清和為董事長，40年(1951)完工落成。廟前一對石獅為清代埔里社廳前的石獅，是埔里鎮重要的歷史文物。廟旁也保留日治時期能高神社的狛犬及部份石燈。廟後二樓的文獻室陳列一批埔里老照片。</p>
@@ -210,16 +208,16 @@
 
       <div class="featured-image-container ipsGrid_span5 gs_reveal gs_reveal_fromRight">
         <div class="card">
-          <img width="479" src="https://picsum.photos/479/479?index=2" alt="">
+          <img width="479" src="./船山照片/醒靈寺.jpg" alt="">
         </div>
       </div>
     </div>
     <!-----------大馬璘與烏牛欄區(7.大馬璘遺址公園)----------------------->
-    <h1 class="header-section gs_reveal ipsType_center" id="7">大馬璘遺址公園</h1>
+    <h1 class="header-section ipsType_center" id="7">大馬璘遺址公園</h1>
     <div class="feature ipsSpacer_bottom_double ipsGrid ipsGrid_collapsePhone" >
       <div class="featured-image-container ipsGrid_span5 gs_reveal gs_reveal_fromLeft">
         <div class="card">
-          <img width="479" src="https://picsum.photos/479/479?index=1" alt="">
+          <img width="479" src="./船山照片/大瑪璘遺址.jpg" alt="">
         </div>
       </div>
 
@@ -228,7 +226,7 @@
       </div>
     </div>
     <!-----------大馬璘與烏牛欄區(8.埔里基督教醫院)---------------------->
-    <h1 class="header-section gs_reveal ipsType_center" id="8">埔里基督教醫院</h1>
+    <h1 class="header-section ipsType_center" id="8">埔里基督教醫院</h1>
     <div class="feature ipsSpacer_bottom_double ipsGrid ipsGrid_collapsePhone" >
       <div class="ipsGrid_span7 ipsType_right">
         <p class="gs_reveal">埔里基督教醫院的前身，是美籍宣教士孫理蓮女士所創立的芥菜種會，自美國募款，於埔里鎮建立的基督教山地中心診所，由謝緯醫師（牧師）擔任第一任院長，以協助埔里及附近偏遠原鄉部落缺乏的醫療服務。世界展望會創辦人鮑伯皮爾斯會長（Dr.Bob.pierce）來台視察，深受同工們服務精神感動，簽出一張空白支票囑咐第二任院長徐賓諾買下埔基現址土地，著手建院。民國51年(1962)6月24日埔里基督教醫院完工落成。74年(1985) 5月23日獲衛生署核准為財團法人埔里基督教醫院，聘請紀歐惠醫師擔任第三任院長。92年(2003)通過衛生署醫策會的評鑑，成為南投縣唯一的區域級醫院，並於100年(2011)4月榮獲第21屆國家品質獎。</p>
@@ -236,16 +234,16 @@
 
       <div class="featured-image-container ipsGrid_span5 gs_reveal gs_reveal_fromRight">
         <div class="card">
-          <img width="479" src="https://picsum.photos/479/479?index=2" alt="">
+          <img width="479" src="./船山照片/埔里基督教醫院.jpg" alt="">
         </div>
       </div>
     </div>
     <!----------大馬璘與烏牛欄區(9.暨大附中)----------------------->
-    <h1 class="header-section gs_reveal ipsType_center" id="9">暨大附中</h1>
+    <h1 class="header-section ipsType_center" id="9">暨大附中</h1>
     <div class="feature ipsSpacer_bottom_double ipsGrid ipsGrid_collapsePhone" >
       <div class="featured-image-container ipsGrid_span5 gs_reveal gs_reveal_fromLeft">
         <div class="card">
-          <img width="479" src="https://picsum.photos/479/479?index=3" alt="">
+          <img width="479" src="./船山照片/暨大附中.jpg" alt="">
         </div>
       </div>
       
@@ -254,7 +252,7 @@
       </div>
     </div>
     <!----------大馬璘與烏牛欄區(10.埔基長照中心)------------------------->
-    <h1 class="header-section gs_reveal ipsType_center" id="10">埔基長照中心</h1>
+    <h1 class="header-section ipsType_center" id="10">埔基長照中心</h1>
     <div class="feature ipsSpacer_bottom_double ipsGrid ipsGrid_collapsePhone" >
       <div class="ipsGrid_span7 ipsType_right">
         <p class="gs_reveal">埔里基督教醫院附設護理之家成立於民國86年(1997)，是經衛生署通過合法立案之護理之家，以跨專業照顧團隊共同照護老人。台灣將進入高齡社會，為長期照護之百年大計，埔里基督教長期照護教學大樓的建立，即在追求照護的品質提升與增進照顧人員的訓練。埔里基督教醫院長期照護教學大樓，將發展以社區為導向的連續性、整合性之照護服務，籌建長期照護教學大樓是期盼透過大家的參與，進而關心了解老年的健康照顧的相關知識，提昇照顧人員在相關照護知識及技能上的需要，並實踐以社區為群體，以家庭為單位的在地溫馨照顧環境。長期照護教學大樓的籌建，不止是提供友善的在地化照護，更藉由訓練在地化人力，提供民眾在地照護老人的工作機會，達到讓社區長者能夠有尊嚴的在地老化理想。</p>
@@ -262,7 +260,7 @@
 
       <div class="featured-image-container ipsGrid_span5 gs_reveal gs_reveal_fromRight">
         <div class="card">
-          <img width="479" src="https://picsum.photos/479/479?index=4" alt="">
+          <img width="479" src="./船山照片/埔基長照中心_fb.jpg" alt=""><!--https://www.facebook.com/LTCEC/photos/124648448983638-->
         </div>
       </div>
     </div>
@@ -271,7 +269,7 @@
     <div class="feature ipsSpacer_bottom_double ipsGrid ipsGrid_collapsePhone" >
       <div class="featured-image-container ipsGrid_span5 gs_reveal gs_reveal_fromLeft">
         <div class="card">
-          <img width="479" src="https://picsum.photos/479/479?index=1" alt="">
+          <img width="479" src="./船山照片/愛蘭國小_中時.jpg" alt=""><!----https://www.chinatimes.com/realtimenews/20190418003905-260405?chdtv-->
         </div>
       </div>
 
@@ -288,7 +286,7 @@
 
       <div class="featured-image-container ipsGrid_span5 gs_reveal gs_reveal_fromRight">
         <div class="card">
-          <img width="479" src="https://picsum.photos/479/479?index=2" alt="">
+          <img width="479" src="./船山照片/梅村社造土角胖_大嘴巴.jpg" alt=""><!---https://boda88.pixnet.net/blog/post/345556853-%E5%8D%97%E6%8A%95%E5%9F%94%E9%87%8C%E7%BE%8E%E9%A3%9F%E4%BC%B4%E6%89%8B%E7%A6%AE%E3%80%8B%E5%9C%9F%E8%A7%92%E8%83%96%E8%8F%9C%E5%96%AE%E5%83%B9%E4%BD%8D%E5%A4%A7%E5%85%AC%E9%96%8B-->
         </div>
       </div>
     </div>
@@ -297,7 +295,7 @@
     <div class="feature ipsSpacer_bottom_double ipsGrid ipsGrid_collapsePhone" >
       <div class="featured-image-container ipsGrid_span5 gs_reveal gs_reveal_fromLeft">
         <div class="card">
-          <img width="479" src="https://picsum.photos/479/479?index=1" alt="">
+          <img width="479" src="./船山照片/愛蘭教會.jpg" alt="">
         </div>
       </div>
 
@@ -314,7 +312,7 @@
 
       <div class="featured-image-container ipsGrid_span5 gs_reveal gs_reveal_fromRight">
         <div class="card">
-          <img width="479" src="https://picsum.photos/479/479?index=2" alt="">
+          <img width="479" src="./船山照片/廣興紙寮.jpg" alt="">
         </div>
       </div>
     </div>
@@ -323,7 +321,7 @@
     <div class="feature ipsSpacer_bottom_double ipsGrid ipsGrid_collapsePhone" >
       <div class="featured-image-container ipsGrid_span5 gs_reveal gs_reveal_fromLeft">
         <div class="card">
-          <img width="479" src="https://picsum.photos/479/479?index=3" alt="">
+          <img width="479" src="./船山照片/西鎮堂.jpg" alt="">
         </div>
       </div>
 
@@ -342,16 +340,16 @@
 
       <div class="featured-image-container ipsGrid_span5 gs_reveal gs_reveal_fromRight">
         <div class="card">
-          <img width="479" src="https://picsum.photos/479/479?index=4" alt="">
+          <img width="479" src="./船山照片/烏牛欄巧克力花園_2.jpg" alt="">
         </div>
       </div>
     </div>
     <!---------阿里史區(17.黃望家古厝)------------------------->
-    <h1 class="header-section gs_reveal ipsType_center" id="17">黃望家古厝</h1>
+    <h1 class="header-section ipsType_center" id="17">黃望家古厝</h1>
     <div class="feature ipsSpacer_bottom_double ipsGrid ipsGrid_collapsePhone" >
       <div class="featured-image-container ipsGrid_span5 gs_reveal gs_reveal_fromLeft">
         <div class="card">
-          <img width="479" src="https://picsum.photos/479/479?index=1" alt="">
+          <img width="479" src="./船山照片/黃望家古厝.jpg" alt="">
         </div>
       </div>
 
@@ -360,7 +358,7 @@
       </div>
     </div>
     <!---------阿里史區(18.紹興酒泉&洗衣亭)------------------------->
-    <h1 class="header-section gs_reveal ipsType_center" id="18">紹興酒泉&洗衣亭</h1>
+    <h1 class="header-section ipsType_center" id="18">紹興酒泉&洗衣亭</h1>
     <div class="feature ipsSpacer_bottom_double ipsGrid ipsGrid_collapsePhone" >
       <div class="ipsGrid_span7 ipsType_right">
         <p class="gs_reveal">位於鐵山路和鐵山二巷交會處，矗立一座紹興泉的集水站，供在地人取用，此處水源即為聞名遐邇的愛蘭甘泉，是日治時期以來釀造埔里知名好酒的水源，曾經是進貢日本天皇的萬壽酒，也是戰後埔里酒廠用來釀造紹興酒、愛蘭白酒的泉脈。一壺好酒，打開愛蘭水泉的國內外知名度。然而，清冽的水質不僅用於釀酒，更有生活用途一面，在集水站對面下方台階處有一處洗衣亭，是附近婦女和孩子們最喜愛的洗衣亭之一，每日清晨和傍晚會看見婦女們手提洗衣籃、全副青蛙裝模樣下水搗衣搓揉，孩子則在身旁泡腳戲水。這個時刻與空間是非常獨特的，熟識者彼此寒暄問候、東家長西家短，好似社會支持團體的聚會，將難以名狀的情緒擊搗成歌。於是，洗完衣服的同時，也滌淨了心情。特別的是，除了女性，偶爾也有男性來此洗衣和談話。水的文化，牽動了個人、家庭與社區的連結。</p>
@@ -368,16 +366,16 @@
 
       <div class="featured-image-container ipsGrid_span5 gs_reveal gs_reveal_fromRight">
         <div class="card">
-          <img width="479" src="https://picsum.photos/479/479?index=2" alt="">
+          <img width="479" src="./船山照片/阿里史洗衣亭.jpg" alt="">
         </div>
       </div>
     </div>
     <!-------------阿里史區(19.平埔墓碑)--------------------->
-    <h1 class="header-section gs_reveal ipsType_center" id="19">平埔墓碑</h1>
+    <h1 class="header-section ipsType_center" id="19">平埔墓碑</h1>
     <div class="feature ipsSpacer_bottom_double ipsGrid ipsGrid_collapsePhone" >
       <div class="featured-image-container ipsGrid_span5 gs_reveal gs_reveal_fromLeft">
         <div class="card">
-          <img width="479" src="https://picsum.photos/479/479?index=1" alt="">
+          <img width="479" src="./船山照片/公墓.jpg" alt=""><!---https://news.pts.org.tw/article/485474-->
         </div>
       </div>
 
@@ -386,7 +384,7 @@
       </div>
     </div>
     <!--------------阿里史區(20.日南天后宮)------------------->
-    <h1 class="header-section gs_reveal ipsType_center" id="20">日南天后宮</h1>
+    <h1 class="header-section ipsType_center" id="20">日南天后宮</h1>
     <div class="feature ipsSpacer_bottom_double ipsGrid ipsGrid_collapsePhone" >
       <div class="ipsGrid_span7 ipsType_right">
         <p class="gs_reveal">「日南媽」又稱為「埔里天后宮」，係清道光年間道卡斯族人(Taokas)集體移民來埔里盆地拓墾時所攜入的媽祖信仰。日南社為道卡斯族蓬山八社之一，原居地在今台中大甲附近。道光年間有進來埔里開墾的道卡斯族村社有：大甲社、日南社、日北社、吞宵社、雙尞社、房里社等社，集中在埔里盆地的西側一帶。媽祖信仰與捕魚及海運商旅有關，原屬海神崇拜，但是平埔族人移墾埔里時，也攜帶媽祖的香火或神像進入內山，希望得到媽祖庇佑，得以免於受到原住民出草馘首的禍難。民國106年(2017)日南媽（埔里天后宮）的遶境廟會活動以「環保」做為主要訴求，呼籲信眾不焚香、不燒金紙、不放鞭炮、不使用一次性餐具等，開風氣之先，受到媒體輿論矚目而知名度大增，廣獲社會大眾好評。</p>
@@ -394,16 +392,16 @@
 
       <div class="featured-image-container ipsGrid_span5 gs_reveal gs_reveal_fromRight">
         <div class="card">
-          <img width="479" src="https://picsum.photos/479/479?index=2" alt="">
+          <img width="479" src="./船山照片/日南天后宮.jpg" alt="">
         </div>
       </div>
     </div>
     <!------------阿里史區(21.天雷宮)--------------------->
-    <h1 class="header-section gs_reveal ipsType_center" id="21">天雷宮</h1>
+    <h1 class="header-section ipsType_center" id="21">天雷宮</h1>
     <div class="feature ipsSpacer_bottom_double ipsGrid ipsGrid_collapsePhone" >
       <div class="featured-image-container ipsGrid_span5 gs_reveal gs_reveal_fromLeft">
         <div class="card">
-          <img width="479" src="https://picsum.photos/479/479?index=3" alt="">
+          <img width="479" src="./船山照片/天雷宮.jpg" alt="">
         </div>
       </div>
 
@@ -412,7 +410,7 @@
       </div>
     </div>
         <!----------阿里史區(22.船尾—地質露頭)------------------------->
-    <h1 class="header-section gs_reveal ipsType_center" id="22">船尾—地質露頭</h1>
+    <h1 class="header-section ipsType_center" id="22">船尾—地質露頭</h1>
     <div class="feature ipsSpacer_bottom_double ipsGrid ipsGrid_collapsePhone" >
       <div class="ipsGrid_span7 ipsType_right">
         <p class="gs_reveal">地質露頭，是判斷岩層在長時間大地作用之下的遺跡，能瞭解不同岩石種類之間的接觸關係，據以觀察地質構造。從地質露頭所收集的各類岩層資料，可推論附近地區岩石的可能組成方式與岩盤結構，掌握土地生成的歷史。愛蘭台地上的地質露頭，是台地被南烘溪長期侵蝕沖刷後所留下來的斷面，透過層層疊疊的石頭和沙石堆積分布，能清楚了解愛蘭台地的原始岩層構造，為一難得肉眼可見的地理資訊系統。</p>
@@ -420,7 +418,7 @@
 
       <div class="featured-image-container ipsGrid_span5 gs_reveal gs_reveal_fromRight">
         <div class="card">
-          <img width="479" src="https://picsum.photos/479/479?index=4" alt="">
+          <img width="479" src="./船山照片/桶頭橋觸口斷層露頭.jpg" alt=""><!--http://140.112.63.111/ctlee/page02/02sight120.html-->
         </div>
       </div>
     </div>
@@ -436,9 +434,6 @@
   <h3 class="w3-center">CONTACT</h3>
   <p class="w3-center w3-large">Lets get in touch. Send us a message:</p>
   <div style="margin-top:48px">
-    <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Chicago, US</p>
-    <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: +00 151515</p>
-    <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: mail@mail.com</p>
     <br>
     <form action="/action_page.php" target="_blank">
       <p><input class="w3-input w3-border" type="text" placeholder="Name" required name="Name"></p>
@@ -459,15 +454,15 @@
 <!-- Footer -->
 <footer class="w3-center w3-black w3-padding-64">
   <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
-  <div class="w3-xlarge w3-section">
-    <i class="fa fa-facebook-official w3-hover-opacity"></i>
-    <i class="fa fa-instagram w3-hover-opacity"></i>
-    <i class="fa fa-snapchat w3-hover-opacity"></i>
-    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-    <i class="fa fa-twitter w3-hover-opacity"></i>
-    <i class="fa fa-linkedin w3-hover-opacity"></i>
+  <div>
+    <P>聯絡我們: leegun047@gmail.com  oyj674@gmail.com</p>
   </div>
-  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+  <div>
+    <i class="w3-xlarge w3-section">以上介紹皆來自:  <a href="https://onedrive.live.com/view.aspx?resid=DF69ADC7EB2CF6B1!2532&ithint=file%2cdocx&authkey=!ADp_PJsW8m5CxIQ" 
+      title="https://onedrive.live.com/view.aspx?resid=DF69ADC7EB2CF6B1!2532&ithint=file%2cdocx&authkey=!ADp_PJsW8m5CxIQ"
+      target="_blank" class="w3-hover-text-green">船山22景點解說文</a></i>
+    <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+  </div>
 </footer>
  
 <script>
@@ -504,7 +499,6 @@ function myAccFunc1() {
     x.className = x.className.replace(" w3-show", "");
   }
 }
-
 function myAccFunc2() {
   var x = document.getElementById("demo2");
   if (x.className.indexOf("w3-show") == -1) {
@@ -522,13 +516,30 @@ function myAccFunc3() {
     x.className = x.className.replace(" w3-show", "");
   }
 }
-  $(document).ready(function(){
-  $("img").click(function(){
-    $("#mySidebar").hide();
-  });
-});
+function check(y){
+  if(y == 1){
+    var x1 = document.getElementById("demo2");
+    var x2 = document.getElementById("demo3");
+    x1.className = x1.className.replace(" w3-show", "");
+    x2.className = x2.className.replace(" w3-show", "");
+  }
+  else if(y == 2){
+    var x1 = document.getElementById("demo1");
+    var x2 = document.getElementById("demo3");
+    x1.className = x1.className.replace(" w3-show", "");
+    x2.className = x2.className.replace(" w3-show", "");
+  }
+  else if(y == 3){
+    var x1 = document.getElementById("demo1");
+    var x2 = document.getElementById("demo2");
+    x1.className = x1.className.replace(" w3-show", "");
+    x2.className = x2.className.replace(" w3-show", "");
+  }
+}
+
 
 </script>
 
 </body>
 </html>
+
