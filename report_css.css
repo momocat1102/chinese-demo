@@ -3,6 +3,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 body, html {
   height: 100%;
   line-height: 1.8;
+  justify-content: center;
 }
 
 /* Full height image header */
@@ -12,6 +13,12 @@ body, html {
   min-height: 100%;
 }
 
+.container{
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  padding: 70px;
+}
 
 .div-anime {
   width: 100px;
@@ -54,6 +61,7 @@ body, html {
     display: -ms-flexbox;
     display: flex;
     flex-wrap: wrap;
+    padding: 30px;
   }
   .ipsGrid::before, .ipsGrid::after {
     display: table;
@@ -92,9 +100,38 @@ body, html {
     overflow: hidden;
     background: #ffffff;
     box-shadow: 1px 1px 5px 1px #CCCCCC;
-  /*   transition: 0.3s; */
+  /*transition: 0.3s; */
   }
-  .featured-image-container .card {
+  .photo > img{
+    margin: 5px;
+    border: 3px solid #bb7900;
+    border-radius: 1px;
+    overflow: hidden;
+  }
+  .photo > img:hover{
+    border: 3px solid #ffffff;
+  }
+  .photo2{
+    display: flex;
+    flex-flow: column;
+    flex-wrap: wrap;
+  }
+  .Long_photo{
+    
+    display: block;
+    flex-flow: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+
+  .short_photo{
+    display: block;
+    flex-flow:row;
+    flex-wrap: wrap;
+    justify-items: center;
+  }
+
+  .featured-image-container .card{
     padding: 10px;
     height: 0;
     padding-bottom: calc(100% - 10px);
@@ -107,7 +144,7 @@ body, html {
   }
   
   .header-section {
-    margin: 100px auto;
+    margin: 120px auto;
   }
   
   .gs_reveal {
@@ -119,8 +156,17 @@ body, html {
     font-family: 微軟正黑體, sans-serif;
     font-style: inherit;
   }
+  h1.gs_reveal{
+    font-size: 30px;
+  }
   .ipsType_right{
     text-align:left;
+  }
+  .hover_1:hover{
+    color: dodgerblue;
+  }
+  #map {
+    height: 80%; width: 80%;
   }
   @media screen and (max-width:800px){
     .header-section {
@@ -182,4 +228,5 @@ body, html {
     /*   transition: 0.3s; */
     }
   }
+  
   
