@@ -8,17 +8,20 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="./report_css.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+    crossorigin=""/>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
-<script src="./report_js.js"></script>
-</head>
-<body>
 
+</head>
+<body class="w3-light-gray">
 <!-- Navbar (sit on top) -->
-<div class="w3-top">
-  <div class="w3-bar w3-white w3-card" id="myNavbar">
+<div class="w3-top w3-black">
+  <div class="w3-bar w3-white =w3-card" id="myNavbar">
     <a href="#home" class="w3-bar-item w3-button w3-wide">MAP</a>
     <!-- Right-sided navbar links -->
     <div class="w3-right w3-hide-small">
@@ -37,6 +40,7 @@
         <div class="w3-dropdown-content w3-card-4 w3-bar-block">
           <a href="#6" class="w3-bar-item w3-button">醒靈寺</a>
           <a href="#7" class="w3-bar-item w3-button">大馬璘遺址公園</a>
+          <a href="#8" class="w3-bar-item w3-button">埔里基督教醫院</a>
           <a href="#9" class="w3-bar-item w3-button">暨大附中</a>
           <a href="#10" class="w3-bar-item w3-button">埔基長照中心</a>
           <a href="#11" class="w3-bar-item w3-button">愛蘭國小</a>
@@ -111,87 +115,83 @@
   <a href="./photo.html" class="w3-bar-item w3-button"><i class="fa fa-photo"></i> 景點賞析</a>
 </nav>
 
-<!-- Header with full-height image -->
-<header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
-  <div class="w3-display-topleft w3-text-white" style="padding:48px">
-    <a href="#about" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off"><img src="./lion.jpg" width="100"></a>
-  </div>
-  <div class="w3-display-middle w3-text-white" style="padding:48px">
-    <a href="#team" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off"><img src="./lion.jpg" width="100"></a>
-  </div>
-  <div class="w3-display-bottomright w3-text-white" style="padding:48px">
-    <a href="#work" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off"><img src="./lion.jpg" width="100"></a>
-  </div>
-  <div class="w3-display-bottomleft w3-text-white" style="padding:48px">
-    <a href="#pricing" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off"><img src="./lion.jpg" width="100"></a>
-  </div>
-  <div class="w3-display-bottomleft w3-text-grey w3-large" style="padding:24px 48px">
-  </div>
-</header>
+<!-- map -->
+<div class="container ipsType_center w3-border-dark-gray">
+    <iframe class="w3-hover-border-dark-gray" src="https://momocat1102.github.io/chinese-demo/map.html" width="100%" height="100%"></iframe>
+  
+</div>
 
-<!-------------------------------------------主頁------------------------------------------------------->
-<div class="cInnerContent" >
   
 
-  <div class="features" onclick="w3_close()">
+
+<!-------------------------------------------主頁------------------------------------------------------->
+<div class="cInnerContent w3-white">
+  
+  <div class="features" onclick="w3_close()"></div>
     <!-------------南村區(1.烏牛欄橋)--------------------->
-    <h1 class="header-section ipsType_center" id="1"><a href="https://zh.wikipedia.org/wiki/%E7%83%8F%E7%89%9B%E6%AC%84%E4%B9%8B%E5%BD%B9" target="_blank">烏牛欄橋</a></h1>
+    <h1 class="header-section gs_reveal ipsType_center w3-dark-grey" id="1">烏牛欄橋</h1>
     <div class="feature ipsSpacer_bottom_double ipsGrid ipsGrid_collapsePhone" >
       <div class="featured-image-container ipsGrid_span5 gs_reveal gs_reveal_fromLeft">
         <div class="card">
-          <img width="479" src="./船山照片/愛蘭橋.jpg" alt="">
+          <img width="479" src="./船山照片/愛蘭橋.jpg" alt="" title="楊樸霖拍攝">
         </div>
       </div>
 
      <div class="ipsGrid_span7 ipsType_left">
-        <p class="gs_reveal">烏牛欄橋為一日治時期之吊橋，橫跨南烘溪，其下有一於大正初年建設置之輕便車鐵道，吊橋兩邊分別為現今之台14線及台21線，附近有坪仔頂、石珠頂、大瑪璘等史前遺址，因昭和5年(1930)年霧社事件過後，「裏南投道路」之開通，埔里的對外交通逐漸由公路運輸取代原有之「埔里輕鐵線」。此處亦為民國36年(1947)二二八事件當中烏牛欄戰役之發生地點，現今愛蘭橋之南側設有紀念碑，原本的烏牛欄吊橋於民國50年初(1961)改建為水泥橋並改稱為愛蘭橋，原烏牛欄吊橋北側之橋墩仍可見於醒靈寺南側之陡崖上。</p>
+        <p class="gs_reveal">烏牛欄橋為一日治時期之吊橋，橫跨南烘溪，其下有一於大正初年建設置之輕便車鐵道，吊橋兩邊分別為現今之台14線及台21線，附近有坪仔頂、石珠頂、大瑪璘等史前遺址，因昭和5年(1930)年
+          <a class="gs_reveal, hover_1" href = https://zh.wikipedia.org/wiki/%E9%9C%A7%E7%A4%BE%E4%BA%8B%E4%BB%B6 title="維基百科_霧社事件">霧社事件</a>過後，「裏南投道路」之開通，埔里的對外交通逐漸由公路運輸取代原有之「埔里輕鐵線」。</p>
+        <p class="gs_reveal">此處亦為民國36年(1947)<a class="gs_reveal, hover_1" href = https://zh.wikipedia.org/wiki/%E4%BA%8C%E4%BA%8C%E5%85%AB%E4%BA%8B%E4%BB%B6 title="維基百科_二二八事件">二二八事件</a>當中烏牛欄戰役之發生地點，現今愛蘭橋之南側設有紀念碑，原本的烏牛欄吊橋於民國50年初(1961)改建為水泥橋並<b>改稱為愛蘭橋</b>，原烏牛欄吊橋北側之橋墩仍可見於醒靈寺南側之陡崖上。</p>
       </div>
     </div>
     <!--------------南村區(2.烏牛欄戰役紀念碑)------------------->
-    <h1 class="header-section ipsType_center" id="2">烏牛欄戰役紀念碑</h1>
+    <h1 class="header-section gs_reveal ipsType_center w3-dark-grey" id="2">烏牛欄戰役紀念碑</h1>
     <div class="feature ipsSpacer_bottom_double ipsGrid ipsGrid_collapsePhone" >
       <div class="ipsGrid_span7 ipsType_right">
-        <p class="gs_reveal">此碑為民國93年(2004)由時任南投縣長林宗男，為紀念二二八事件中的烏牛欄之役所立，並被命為「圓而不圓」，雕刻者為白滄沂，其造型特殊，是個原創於一節枯木之銅塑作品，作品中樹木的年輪意涵深遠，象徵雖有破損卻也圓，指的是二二八事件是個不圓滿的事件，卻希望它能有個種族融合相互寬容的圓滿結局，同時作品從另一角度亦可解讀成不圓而圓，意思是事件雖然圓滿落幕，卻是個歷史悲劇，不必誇大卻也不能忘記這個傷痛的教訓。</p>
+        <p class="gs_reveal">此碑為民國93年(2004)由時任南投縣長林宗男，為紀念二二八事件中的烏牛欄之役所立，並被命為「
+          <a class="gs_reveal, hover_1" href ="https://memory.culture.tw/Home/Detail?Id=181807&IndexCode=Culture_Place"  title="烏牛欄戰役紀念碑-圓而不圓_文化部國家文化記憶庫">圓而不圓</a>」，雕刻者為白滄沂，其造型特殊，是個原創於一節枯木之銅塑作品，作品中樹木的年輪意涵深遠，象徵雖有破損卻也圓，指的是二二八事件是個<b>不圓滿的事件，卻希望它能有個種族融合相互寬容的圓滿結局</b>，同時作品從另一角度亦可解讀成不圓而圓，意思是事件雖然圓滿落幕，卻是個歷史悲劇，不必誇大卻也不能忘記這個傷痛的教訓。</p>
       </div>
 
       <div class="featured-image-container ipsGrid_span5 gs_reveal gs_reveal_fromRight">
         <div class="card">
-          <img width="479" src="./船山照片/愛蘭戰役紀念碑.jpg" alt="">
+          <img width="479" src="./船山照片/愛蘭戰役紀念碑.jpg" alt="" title="楊樸霖拍攝">
         </div>
       </div>
     </div>
     <!------------南村區(3.木生昆蟲博物館)--------------------->
-    <h1 class="header-section ipsType_center" id="3">木生昆蟲博物館</h1>
+    <h1 class="header-section gs_reveal ipsType_center w3-dark-grey" id="3">木生昆蟲博物館</h1>
     <div class="feature ipsSpacer_bottom_double ipsGrid ipsGrid_collapsePhone" >
       <div class="featured-image-container ipsGrid_span5 gs_reveal gs_reveal_fromLeft">
         <div class="card">
-          <img width="479" src="./船山照片/木生昆蟲博物館.jpg" alt="">
+          <img width="479" src="./船山照片/木生昆蟲博物館.jpg" alt="" title="楊樸霖拍攝">
         </div>
       </div>
 
       <div class="ipsGrid_span7 ipsType_left">
-        <p class="gs_reveal">木生昆蟲事業於大正8年間(1919)由第一代館長余木生所創，最初名為木生昆蟲採集所，余木生畢生從事昆蟲採集研究工作並發現多種新品種之甲蟲與蝴蝶，後第二代館長余清金繼承父志，並於民國63年(1974)於埔里鎮南昌街上成立設備完整之昆蟲館供社會各界及學生參觀，後因參觀人數過多無法容納之故遷往今日南村里木生博物館所在之處，目前博物館由第四代館長余幼華經營。</p>
+        <p class="gs_reveal"><a class="gs_reveal, hover_1" href ="https://insectms.wixsite.com/muhsheng"  title="muhsheng">木生昆蟲</a>
+          事業於大正8年間(1919)由第一代館長余木生所創，最初名為木生昆蟲採集所，余木生畢生從事昆蟲採集研究工作並發現多種新品種之甲蟲與蝴蝶，後第二代館長余清金繼承父志，並於民國63年(1974)於埔里鎮南昌街上成立設備完整之昆蟲館供社會各界及學生參觀，後因參觀人數過多無法容納之故遷往今日南村里木生博物館所在之處，目前博物館由第四代館長余幼華經營。</p>
       </div>
     </div>
         <!----------南村區(4.牛耳石雕公園)------------------------->
-    <h1 class="header-section ipsType_center" id="4">牛耳石雕公園</h1>
+    <h1 class="header-section gs_reveal ipsType_center w3-dark-grey" id="4">牛耳石雕公園</h1>
     <div class="feature ipsSpacer_bottom_double ipsGrid ipsGrid_collapsePhone" >
       <div class="ipsGrid_span7 ipsType_right">
-        <p class="gs_reveal">牛耳石雕公園為黃炳松先生於民國76年(1987)所創辦，為亞洲首座素人雕塑林園，近年來已轉型為休閒渡假村，園內之石雕作品以林淵之作品，亦有少數朱銘及楊英風之作品，除是室外展示外亦有林淵美術館、地震紀念館、兒童美術教室、童玩廣場及鄉土文物展示區等，據創辦人所述，名為牛耳之原因為，台灣三位名雕刻家，朱銘、林淵、楊英風生肖都屬牛，他們共為台灣藝術創作努力，希望執雕刻藝術之牛耳，石雕公園因而以此為名。</p>
+        <p class="gs_reveal"><a class="gs_reveal, hover_1" href ="https://www.travelking.com.tw/tourguide/scenery218.html"  title="TravelKing_牛耳石雕公園">牛耳石雕公園</a>
+          為黃炳松先生於民國76年(1987)所創辦，為亞洲首座素人雕塑林園，近年來已轉型為休閒渡假村，園內之石雕作品以林淵之作品，亦有少數朱銘及楊英風之作品，除是室外展示外亦有林淵美術館、地震紀念館、兒童美術教室、童玩廣場及鄉土文物展示區等，據創辦人所述，名為牛耳之原因為，台灣三位名雕刻家，<b>朱銘、林淵、楊英風生肖都屬牛</b>，他們共為台灣藝術創作努力，希望執雕刻藝術之牛耳，石雕公園因而以此為名。</p>
       </div>
 
       <div class="featured-image-container ipsGrid_span5 gs_reveal gs_reveal_fromRight">
         <div class="card">
-          <img width="479" src="./船山照片/牛耳石雕公園（牛相觸堤防）.jpg" alt="">
+          <img width="479" src="./船山照片/牛耳石雕公園（牛相觸堤防）.jpg" alt="" title="楊樸霖拍攝">
         </div>
       </div>
     </div>
     <!-----------南村區(5.南村里義民祠)----------------------->
-    <h1 class="header-section ipsType_center" id="5">南村里義民祠</h1>
+    <h1 class="header-section gs_reveal ipsType_center w3-dark-grey" id="5">南村里義民祠</h1>
     <div class="feature ipsSpacer_bottom_double ipsGrid ipsGrid_collapsePhone" >
       <div class="featured-image-container ipsGrid_span5 gs_reveal gs_reveal_fromLeft">
         <div class="card">
-          <img width="479" src="./船山照片/義民祠_自由時報.jpg" alt=""><!---https://news.ltn.com.tw/news/life/breakingnews/2989520-->
+          <a href="https://news.ltn.com.tw/news/life/breakingnews/2989520"><img width="479"  title="自由時報報導"src="./船山照片/義民祠_自由時報.jpg" alt=""></a>
+            <!---https://news.ltn.com.tw/news/life/breakingnews/2989520-->
         </div>
       </div>
 
@@ -200,76 +200,90 @@
       </div>
     </div>
     <!----------大馬璘與烏牛欄區(6.醒靈寺)------------------------>
-    <h1 class="header-section ipsType_center" id="6">醒靈寺</h1>
+    <h1 class="header-section gs_reveal w3-dark-grey ipsType_center" id="6">醒靈寺</h1>
     <div class="feature ipsSpacer_bottom_double ipsGrid ipsGrid_collapsePhone" >
       <div class="ipsGrid_span7 ipsType_right">
-        <p class="gs_reveal">醒靈寺位於愛蘭臺地東緣，創建於民國40年(1951)，是埔里重要的鸞堂廟宇，主祀三恩主，農曆每月初3、13、23日為乩日，晚上有扶鸞降筆活動。醒靈寺的前身是日南的「解化堂(改化堂)」、「醒化堂」，創建於日治時期大正6年(1917)。戰後初期，民國36年(1947)農曆3月遶境過程，聖駕行到烏牛欄吊橋（今愛蘭橋）時，先鋒太子元帥之輦轎忽然起駕，衝過吊橋直奔至今廟址，次年(1948)信眾籌劃遷建於今廟址，公推許清和、張以時、王進發、陳石鍊等地方賢達為召集人，38年(1949)成立建寺董事會，公推許清和為董事長，40年(1951)完工落成。廟前一對石獅為清代埔里社廳前的石獅，是埔里鎮重要的歷史文物。廟旁也保留日治時期能高神社的狛犬及部份石燈。廟後二樓的文獻室陳列一批埔里老照片。</p>
+        <p class="gs_reveal"><a class="gs_reveal, hover_1" href="https://zh.wikipedia.org/wiki/%E9%86%92%E9%9D%88%E5%AF%BA" title="維基百科_醒靈寺">醒靈寺</a>位於愛蘭臺地東緣，創建於民國40年(1951)，是<b>埔里重要的鸞堂廟宇，主祀三恩主</b>，農曆每月初3、13、23日為乩日，晚上有扶鸞降筆活動。醒靈寺的前身是日南的「解化堂(改化堂)」、「醒化堂」，創建於日治時期大正6年(1917)。</p>
+        <p class="gs_reveal">戰後初期，民國36年(1947)農曆3月遶境過程，聖駕行到烏牛欄吊橋（今愛蘭橋）時，先鋒太子元帥之輦轎忽然起駕，衝過吊橋直奔至今廟址，次年(1948)信眾籌劃遷建於今廟址，公推許清和、張以時、王進發、陳石鍊等地方賢達為召集人，38年(1949)成立建寺董事會，公推許清和為董事長，40年(1951)完工落成。</p>
+        <p class="gs_reveal">廟前一對石獅為清代埔里社廳前的石獅，是埔里鎮重要的歷史文物。廟旁也保留日治時期能高神社的<a class="gs_reveal, hover_1" href="https://zh.wikipedia.org/wiki/%E7%8B%9B%E7%8A%AC" title="維基百科_狛犬">狛犬</a>及部份石燈。廟後二樓的文獻室陳列一批埔里老照片。</p>
       </div>
 
       <div class="featured-image-container ipsGrid_span5 gs_reveal gs_reveal_fromRight">
         <div class="card">
-          <img width="479" src="./船山照片/醒靈寺.jpg" alt="">
+          <img width="479" src="./船山照片/醒靈寺.jpg" alt="" title="楊樸霖拍攝">
         </div>
       </div>
     </div>
     <!-----------大馬璘與烏牛欄區(7.大馬璘遺址公園)----------------------->
-    <h1 class="header-section ipsType_center" id="7">大馬璘遺址公園</h1>
+    <h1 class="header-section gs_reveal w3-dark-grey ipsType_center" id="7">大馬璘遺址公園</h1>
     <div class="feature ipsSpacer_bottom_double ipsGrid ipsGrid_collapsePhone" >
       <div class="featured-image-container ipsGrid_span5 gs_reveal gs_reveal_fromLeft">
         <div class="card">
-          <img width="479" src="./船山照片/大瑪璘遺址.jpg" alt="">
+          <img width="479" src="./船山照片/大瑪璘遺址.jpg" alt="" title="楊樸霖拍攝">
         </div>
       </div>
 
      <div class="ipsGrid_span7 ipsType_left">
-        <p class="gs_reveal">大馬璘文化遺址公園位於醒靈寺旁，前身為舊愛蘭營區，佔地約1.7公頃，屬於大馬璘遺址範圍，是南投縣縣定遺址。為兼具完整保留遺址又避免荒廢閒置遭人破壞，在不進行遺址大規模挖掘考古研究的前提下，也要兼顧完整保留地底下珍貴文物。南投縣政府文化局於106年度編列1,500萬元，著手打造具觀光休閒與教育功能的考古文化園區。園區主要規劃社區居民入口廣場、主題標的區、文化廣場區、遺址保護管理區、遺址教育解說區以及中軸意象，也保留數個先前考古研究的探坑供民眾參觀，搭配遺址教育解說，讓民眾認識大馬璘遺址。完工後，將是南投縣首座文化遺址公園。</p>
+        <p class="gs_reveal"><a class="gs_reveal, hover_1" href="https://nchdb.boch.gov.tw/assets/overview/archaeologicalSite/20091030000002" title="國家文化資產網_大馬璘考古遺址">大馬璘文化遺址</a>
+          公園位於醒靈寺旁，前身為舊愛蘭營區，佔地約1.7公頃，屬於大馬璘遺址範圍，是南投縣縣定遺址。</p>
+        <p class="gs_reveal">為兼具完整保留遺址又避免荒廢閒置遭人破壞，在不進行遺址大規模挖掘考古研究的前提下，也要兼顧完整保留地底下珍貴文物。南投縣政府文化局於106年度編列1,500萬元，著手打造具觀光休閒與教育功能的考古文化園區。</p>
+        <p class="gs_reveal">園區主要規劃<b>社區居民入口廣場、主題標的區、文化廣場區、遺址保護管理區、遺址教育解說區以及中軸意象</b>，也保留數個先前考古研究的探坑供民眾參觀，搭配遺址教育解說，讓民眾認識大馬璘遺址。完工後，將是南投縣首座文化遺址公園。</p>
       </div>
     </div>
     <!-----------大馬璘與烏牛欄區(8.埔里基督教醫院)---------------------->
-    <h1 class="header-section ipsType_center" id="8">埔里基督教醫院</h1>
+    <h1 class="header-section gs_reveal w3-dark-grey ipsType_center" id="8">埔里基督教醫院</h1>
     <div class="feature ipsSpacer_bottom_double ipsGrid ipsGrid_collapsePhone" >
       <div class="ipsGrid_span7 ipsType_right">
-        <p class="gs_reveal">埔里基督教醫院的前身，是美籍宣教士孫理蓮女士所創立的芥菜種會，自美國募款，於埔里鎮建立的基督教山地中心診所，由謝緯醫師（牧師）擔任第一任院長，以協助埔里及附近偏遠原鄉部落缺乏的醫療服務。世界展望會創辦人鮑伯皮爾斯會長（Dr.Bob.pierce）來台視察，深受同工們服務精神感動，簽出一張空白支票囑咐第二任院長徐賓諾買下埔基現址土地，著手建院。民國51年(1962)6月24日埔里基督教醫院完工落成。74年(1985) 5月23日獲衛生署核准為財團法人埔里基督教醫院，聘請紀歐惠醫師擔任第三任院長。92年(2003)通過衛生署醫策會的評鑑，成為南投縣唯一的區域級醫院，並於100年(2011)4月榮獲第21屆國家品質獎。</p>
+        <p class="gs_reveal">埔里基督教醫院的前身，<b>是美籍宣教士孫理蓮女士所創立的<a class="gs_reveal, hover_1" href="https://zh.wikipedia.org/wiki/%E8%8A%A5%E8%8F%9C%E7%A8%AE%E6%9C%83" title="維基百科_芥菜種會">芥菜種會</a>
+          ，自美國募款，於埔里鎮建立的基督教山地中心診所</b>，由謝緯醫師（牧師）擔任第一任院長，以協助埔里及附近偏遠原鄉部落缺乏的醫療服務。</p>
+        <p class="gs_reveal">世界展望會創辦人鮑伯皮爾斯會長（Dr.Bob.pierce）來台視察，深受同工們服務精神感動，簽出一張空白支票囑咐第二任院長徐賓諾買下埔基現址土地，著手建院。民國51年(1962)6月24日埔里基督教醫院完工落成。</p>
+        <p class="gs_reveal">74年(1985) 5月23日獲衛生署核准為財團法人埔里基督教醫院，聘請紀歐惠醫師擔任第三任院長。92年(2003)通過衛生署醫策會的評鑑，成為南投縣唯一的區域級醫院，並於100年(2011)4月榮獲第21屆國家品質獎。</p>
       </div>
 
       <div class="featured-image-container ipsGrid_span5 gs_reveal gs_reveal_fromRight">
         <div class="card">
-          <img width="479" src="./船山照片/埔里基督教醫院.jpg" alt="">
+          <img width="479" src="./船山照片/埔里基督教醫院.jpg" alt="" title="楊樸霖拍攝">
         </div>
       </div>
     </div>
     <!----------大馬璘與烏牛欄區(9.暨大附中)----------------------->
-    <h1 class="header-section ipsType_center" id="9">暨大附中</h1>
+    <h1 class="header-section gs_reveal w3-dark-grey ipsType_center" id="9">暨大附中</h1>
     <div class="feature ipsSpacer_bottom_double ipsGrid ipsGrid_collapsePhone" >
       <div class="featured-image-container ipsGrid_span5 gs_reveal gs_reveal_fromLeft">
         <div class="card">
-          <img width="479" src="./船山照片/暨大附中.jpg" alt="">
+          <img width="479" src="./船山照片/暨大附中.jpg" alt="" title="楊樸霖拍攝">
         </div>
       </div>
       
       <div class="ipsGrid_span7 ipsType_left">
-        <p class="gs_reveal">國立暨南大學附屬高級中學創校於民國47年(1958)，當時校名為南投縣立埔里中學，地點位於埔里鎮西安路(即今南投縣立埔里國民中學)。56年(1967)政府實施國民教育，在「縣辦國中小、省辦高中」原則下，臺灣省政府撥用台灣省菸酒公賣局埔里酒廠經營之省有土地約6甲做為埔里高中用地，由省立南投高中籌辦第一期校舍工程之興建，57年(1968)8月1日由鍾業強擔任首任校長。60年(1971)8月增設高級綜合商業科，61年(1972)試辦高商進修補校，62年(1973)8月進修補校正式成立。88年(1999)921大地震，校舍遭受重創，進行校園重建。90年(2001)12月13日正式改制為「國立暨南國際大學附屬高級中學」(簡稱為「暨大附中」)。校園部分地區屬於大馬璘遺址範圍，有大馬璘文化出土文物，是暨大附中極為獨特且珍貴的臺灣考古文化教學資源，值得大力推廣運用。</p>
+        <p class="gs_reveal"><a class="gs_reveal, hover_1" href="https://zh.wikipedia.org/wiki/%E5%9C%8B%E7%AB%8B%E6%9A%A8%E5%8D%97%E5%9C%8B%E9%9A%9B%E5%A4%A7%E5%AD%B8%E9%99%84%E5%B1%AC%E9%AB%98%E7%B4%9A%E4%B8%AD%E5%AD%B8" title="維基百科_國立暨南國際大學附屬高級中學">國立暨南大學附屬高級中學</a>
+          創校於民國47年(1958)，當時校名為南投縣立埔里中學，地點位於埔里鎮西安路(即今南投縣立埔里國民中學)。</p>
+        <p class="gs_reveal">56年(1967)政府實施國民教育，在「縣辦國中小、省辦高中」原則下，臺灣省政府撥用台灣省菸酒公賣局埔里酒廠經營之省有土地約6甲做為埔里高中用地，由省立南投高中籌辦第一期校舍工程之興建，57年(1968)8月1日由鍾業強擔任首任校長。60年(1971)8月增設高級綜合商業科，61年(1972)試辦高商進修補校，62年(1973)8月進修補校正式成立。</p>
+        <p class="gs_reveal">88年(1999)921大地震，校舍遭受重創，進行校園重建。90年(2001)12月13日正式改制為「國立暨南國際大學附屬高級中學」(簡稱為「暨大附中」)。校園部分地區屬於大馬璘遺址範圍，<b>有大馬璘文化出土文物，是暨大附中極為獨特且珍貴的臺灣考古文化教學資源，值得大力推廣運用。</b></p>
       </div>
     </div>
     <!----------大馬璘與烏牛欄區(10.埔基長照中心)------------------------->
-    <h1 class="header-section ipsType_center" id="10">埔基長照中心</h1>
+    <h1 class="header-section gs_reveal w3-dark-grey ipsType_center" id="10">埔基長照中心</h1>
     <div class="feature ipsSpacer_bottom_double ipsGrid ipsGrid_collapsePhone" >
       <div class="ipsGrid_span7 ipsType_right">
-        <p class="gs_reveal">埔里基督教醫院附設護理之家成立於民國86年(1997)，是經衛生署通過合法立案之護理之家，以跨專業照顧團隊共同照護老人。台灣將進入高齡社會，為長期照護之百年大計，埔里基督教長期照護教學大樓的建立，即在追求照護的品質提升與增進照顧人員的訓練。埔里基督教醫院長期照護教學大樓，將發展以社區為導向的連續性、整合性之照護服務，籌建長期照護教學大樓是期盼透過大家的參與，進而關心了解老年的健康照顧的相關知識，提昇照顧人員在相關照護知識及技能上的需要，並實踐以社區為群體，以家庭為單位的在地溫馨照顧環境。長期照護教學大樓的籌建，不止是提供友善的在地化照護，更藉由訓練在地化人力，提供民眾在地照護老人的工作機會，達到讓社區長者能夠有尊嚴的在地老化理想。</p>
+        <p class="gs_reveal"><a class="gs_reveal, hover_1" href="https://zh.wikipedia.org/wiki/%E5%9F%94%E9%87%8C%E5%9F%BA%E7%9D%A3%E6%95%99%E9%86%AB%E9%99%A2" title="維基百科_埔里基督教醫院">埔里基督教醫院</a>
+          附設護理之家成立於民國86年(1997)，是經衛生署通過合法立案之護理之家，以跨專業照顧團隊共同照護老人。</p>
+        <p class="gs_reveal">台灣將進入高齡社會，為長期照護之百年大計，埔里基督教長期照護教學大樓的建立，即在追求照護的品質提升與增進照顧人員的訓練。埔里基督教醫院長期照護教學大樓，將發展以社區為導向的連續性、整合性之照護服務，籌建長期照護教學大樓是期盼透過大家的參與，進而關心了解老年的健康照顧的相關知識，提昇照顧人員在相關照護知識及技能上的需要，並實踐以社區為群體，以家庭為單位的在地溫馨照顧環境。</p>
+        <p class="gs_reveal">長期照護教學大樓的籌建，<b>不止是提供友善的在地化照護，更藉由訓練在地化人力，提供民眾在地照護老人的工作機會，達到讓社區長者能夠有尊嚴的在地老化理想。</b></p>
       </div>
 
       <div class="featured-image-container ipsGrid_span5 gs_reveal gs_reveal_fromRight">
         <div class="card">
-          <img width="479" src="./船山照片/埔基長照中心_fb.jpg" alt=""><!--https://www.facebook.com/LTCEC/photos/124648448983638-->
+          <a href="https://www.facebook.com/LTCEC/photos/124648448983638"><img width="479" title="埔基長照中心_fb" src="./船山照片/埔基長照中心_fb.jpg" alt=""></a><!--https://www.facebook.com/LTCEC/photos/124648448983638-->
         </div>
       </div>
     </div>
     <!---------大馬璘與烏牛欄區(11.愛蘭國小)------------------------->
-    <h1 class="header-section gs_reveal ipsType_center" id="11">愛蘭國小</h1>
+    <h1 class="header-section gs_reveal w3-dark-grey ipsType_center" id="11">愛蘭國小</h1>
     <div class="feature ipsSpacer_bottom_double ipsGrid ipsGrid_collapsePhone" >
       <div class="featured-image-container ipsGrid_span5 gs_reveal gs_reveal_fromLeft">
         <div class="card">
-          <img width="479" src="./船山照片/愛蘭國小_中時.jpg" alt=""><!----https://www.chinatimes.com/realtimenews/20190418003905-260405?chdtv-->
+          <a href="https://www.chinatimes.com/realtimenews/20190418003905-260405?chdtv"><img width="479" title="中時新聞網" src="./船山照片/愛蘭國小_中時.jpg" alt=""></a><!----https://www.chinatimes.com/realtimenews/20190418003905-260405?chdtv-->
         </div>
       </div>
 
@@ -278,60 +292,67 @@
       </div>
     </div>
     <!----------大馬璘與烏牛欄區(12.梅村社造土角胖)----------------------->
-    <h1 class="header-section gs_reveal ipsType_center" id="12">梅村社造土角胖</h1>
+    <h1 class="header-section gs_reveal w3-dark-grey ipsType_center" id="12">梅村社造土角胖</h1>
     <div class="feature ipsSpacer_bottom_double ipsGrid ipsGrid_collapsePhone" >
       <div class="ipsGrid_span7 ipsType_right">
-        <p class="gs_reveal">全臺灣4,000多個社區當中，僅有2個社區以農村時代的建築物「土角厝」為地方特色，愛蘭里梅村社區是其中之一。梅村社區為了推廣土角文化，不僅可以體驗製作「土角磚」，更推出土角磚造型的「土角胖」（土角麵包），尺寸大小完全比照土角磚的規格製作。梅村社區以土角為中心，推廣與創意延伸，並結合社區產業茭白筍，研發出特色伴手禮-土角胖，成為梅村社區別具特色的文創商品。</p>
+        <p class="gs_reveal">全臺灣4,000多個社區當中，僅有2個社區以農村時代的建築物「土角厝」為地方特色，愛蘭里梅村社區是其中之一。梅村社區為了推廣土角文化，不僅可以體驗製作「土角磚」，更推出土角磚造型的「土角胖」（土角麵包），尺寸大小完全比照土角磚的規格製作。</p>
+        <p class="gs_reveal">梅村社區以土角為中心，推廣與創意延伸，並<b>結合社區產業茭白筍，研發出特色伴手禮-土角胖，成為梅村社區別具特色的文創商品。</b></p>
       </div>
 
       <div class="featured-image-container ipsGrid_span5 gs_reveal gs_reveal_fromRight">
         <div class="card">
-          <img width="479" src="./船山照片/梅村社造土角胖_大嘴巴.jpg" alt=""><!---https://boda88.pixnet.net/blog/post/345556853-%E5%8D%97%E6%8A%95%E5%9F%94%E9%87%8C%E7%BE%8E%E9%A3%9F%E4%BC%B4%E6%89%8B%E7%A6%AE%E3%80%8B%E5%9C%9F%E8%A7%92%E8%83%96%E8%8F%9C%E5%96%AE%E5%83%B9%E4%BD%8D%E5%A4%A7%E5%85%AC%E9%96%8B-->
+          <a href="https://boda88.pixnet.net/blog/post/345556853-%E5%8D%97%E6%8A%95%E5%9F%94%E9%87%8C%E7%BE%8E%E9%A3%9F%E4%BC%B4%E6%89%8B%E7%A6%AE%E3%80%8B%E5%9C%9F%E8%A7%92%E8%83%96%E8%8F%9C%E5%96%AE%E5%83%B9%E4%BD%8D%E5%A4%A7%E5%85%AC%E9%96%8B">
+            <img width="479" src="./船山照片/梅村社造土角胖_大嘴巴.jpg" alt="" title="土角胖_大嘴巴菜單王"></a><!---https://boda88.pixnet.net/blog/post/345556853-%E5%8D%97%E6%8A%95%E5%9F%94%E9%87%8C%E7%BE%8E%E9%A3%9F%E4%BC%B4%E6%89%8B%E7%A6%AE%E3%80%8B%E5%9C%9F%E8%A7%92%E8%83%96%E8%8F%9C%E5%96%AE%E5%83%B9%E4%BD%8D%E5%A4%A7%E5%85%AC%E9%96%8B-->
         </div>
       </div>
     </div>
     <!-------------大馬璘與烏牛欄區(13.烏牛欄教會)--------------------->
-    <h1 class="header-section gs_reveal ipsType_center" id="13">烏牛欄教會</h1>
+    <h1 class="header-section gs_reveal w3-dark-grey ipsType_center" id="13">烏牛欄教會</h1>
     <div class="feature ipsSpacer_bottom_double ipsGrid ipsGrid_collapsePhone" >
       <div class="featured-image-container ipsGrid_span5 gs_reveal gs_reveal_fromLeft">
         <div class="card">
-          <img width="479" src="./船山照片/愛蘭教會.jpg" alt="">
+          <img width="479" src="./船山照片/愛蘭教會.jpg" alt="" title="楊樸霖拍攝">
         </div>
       </div>
 
      <div class="ipsGrid_span7 ipsType_left">
-        <p class="gs_reveal">愛蘭長老教會興建於同治12年（1873），是埔里鎮歷史最悠久的基督教會，早期稱作「烏牛欄禮拜堂」、「烏牛欄教會」，是英國基督長老教會台南宣士會派李庥牧師（Hugh Ritchie）到烏牛欄社興建的禮拜堂，並請宣教師甘為霖（William Campbell）前來佈教，因此「烏牛欄禮拜堂」也成為埔里地區基督教的發源地。早期愛蘭教會會友多以巴宰族人為主體，但戰後台灣社會環境快速變遷，許多耆老凋零，原漢融合之下，族人漸漸流失了文化認同，「文化復振」成為愛蘭教會的重要事工和宣教轉機。民國88年(1999)，居民開始恢復巴宰傳統「牽田、走鏢」活動，愛蘭教會及南投縣巴宰族群文化協會成員齊心努力之下，教會成為母語保存的最大基地。</p>
+        <p class="gs_reveal">愛蘭長老教會興建於同治12年（1873），是埔里鎮歷史最悠久的基督教會，早期稱作「烏牛欄禮拜堂」、「烏牛欄教會」，是英國基督長老教會台南宣士會派李庥牧師（Hugh Ritchie）到烏牛欄社興建的禮拜堂，並請宣教師甘為霖（William Campbell）前來佈教，因此「烏牛欄禮拜堂」也成為埔里地區基督教的發源地。</p>
+        <p class="gs_reveal"><b>早期愛蘭教會會友多以巴宰族人為主體，但戰後台灣社會環境快速變遷，許多耆老凋零，原漢融合之下，族人漸漸流失了文化認同，「文化復振」成為愛蘭教會的重要事工和宣教轉機。</b>民國88年(1999)，居民開始恢復巴宰傳統「牽田、走鏢」活動，愛蘭教會及南投縣巴宰族群文化協會成員齊心努力之下，教會成為母語保存的最大基地。</p>
       </div>
     </div>
     <!---------阿里史區(14.廣興紙寮)------------------------>
-    <h1 class="header-section gs_reveal ipsType_center" id="14">廣興紙寮</h1>
+    <h1 class="header-section gs_reveal w3-dark-grey ipsType_center" id="14">廣興紙寮</h1>
     <div class="feature ipsSpacer_bottom_double ipsGrid ipsGrid_collapsePhone" >
       <div class="ipsGrid_span7 ipsType_right">
-        <p class="gs_reveal">埔里的水質冷冽清澈而純淨甘甜，是當地重要自然資源，成為造紙、釀酒的基本原料。其中造紙產業，早在日治昭和10年(1935)即有日本人橫溝大藏在烏牛欄橋下進行試驗，成為嚆矢，奠立埔里造紙業之礎石。民國54年(1965)成立的廣興紙寮，由黃耀東先生一手創立，初期名稱「廣興製紙加工所」，主要是做代工，隨著投入手工宣紙的研發製造，民國62年(1973)遂更名「廣興造紙廠」。廣興造紙廠注重造紙品質和技術提升，民國80年(1991)開始外銷日本與韓國市場，造就一段黃金時期。第二代接班人黃煥彰承繼造紙傳統與技術，謀求進一步發展，然而大時代環境日益艱困，許多埔里紙廠陸續外移或關廠，遂決定轉型為造紙產業文化館，將造紙過程中的抄紙、壓紙、烘紙、拓印等步驟，設計為手作體驗和教育推廣內容，讓遊客體會造紙傳統內涵，成為台灣第一家造紙觀光工廠，近年來更積極投入文創產業，發明獨特可食用的菜倫紙。</p>
+        <p class="gs_reveal">埔里的水質冷冽清澈而純淨甘甜，是當地重要自然資源，成為造紙、釀酒的基本原料。其中造紙產業，早在日治昭和10年(1935)即有日本人橫溝大藏在烏牛欄橋下進行試驗，成為嚆矢，奠立埔里造紙業之礎石。</p>
+        <p class="gs_reveal">民國54年(1965)成立的
+          <a class="gs_reveal, hover_1" href="https://www.taiwanpaper.net/services" title="廣興紙寮官網">廣興紙寮</a>，由黃耀東先生一手創立，初期名稱「廣興製紙加工所」，主要是做代工，隨著投入手工宣紙的研發製造，民國62年(1973)遂更名「廣興造紙廠」。廣興造紙廠注重造紙品質和技術提升，民國80年(1991)開始外銷日本與韓國市場，造就一段黃金時期。</p>
+        <p class="gs_reveal">第二代接班人黃煥彰承繼造紙傳統與技術，謀求進一步發展，然而大時代環境日益艱困，許多埔里紙廠陸續外移或關廠，<b>遂決定轉型為造紙產業文化館，將造紙過程中的抄紙、壓紙、烘紙、拓印等步驟，設計為手作體驗和教育推廣內容，讓遊客體會造紙傳統內涵，成為台灣第一家造紙觀光工廠</b>，近年來更積極投入文創產業，發明獨特可食用的菜倫紙。</p>
       </div>
 
       <div class="featured-image-container ipsGrid_span5 gs_reveal gs_reveal_fromRight">
         <div class="card">
-          <img width="479" src="./船山照片/廣興紙寮.jpg" alt="">
+          <img width="479" src="./船山照片/廣興紙寮.jpg" alt="" title="楊樸霖拍攝">
         </div>
       </div>
     </div>
     <!----------阿里史區(15.西鎮堂)----------------------->
-    <h1 class="header-section gs_reveal ipsType_center" id="15">西鎮堂</h1>
+    <h1 class="header-section gs_reveal w3-dark-grey ipsType_center" id="15">西鎮堂</h1>
     <div class="feature ipsSpacer_bottom_double ipsGrid ipsGrid_collapsePhone" >
       <div class="featured-image-container ipsGrid_span5 gs_reveal gs_reveal_fromLeft">
         <div class="card">
-          <img width="479" src="./船山照片/西鎮堂.jpg" alt="">
+          <img width="479" src="./船山照片/西鎮堂.jpg" alt="" title="楊樸霖拍攝">
         </div>
       </div>
 
       <div class="ipsGrid_span7 ipsType_left">
-        <p class="gs_reveal">位於鐵山社區的西鎮堂，不僅是鐵山社區信仰中心，也是埔里特色廟宇之一。西鎮堂主祀西遊記中的齊天大聖孫悟空，陪祀唐三藏、天蓬元帥豬八戒、沙悟淨和白馬將軍，同時供奉眾神所持有的獨特法器，為全台僅存能完整呈現西遊記人物和特色的道教寺廟。</p>
+        <p class="gs_reveal">位於鐵山社區的
+          <a class="gs_reveal, hover_1" href="https://memory.culture.tw/Home/Detail?Id=217468&IndexCode=Culture_Place" title="文化部國家文化記憶庫_西鎮堂">西鎮堂</a>，不僅是鐵山社區信仰中心，也是埔里特色廟宇之一。西鎮堂主祀<b>西遊記中的齊天大聖孫悟空，陪祀唐三藏、天蓬元帥豬八戒、沙悟淨和白馬將軍，同時供奉眾神所持有的獨特法器</b>，為全台僅存能完整呈現西遊記人物和特色的道教寺廟。</p>
         <p class="gs_reveal">西鎮堂的建廟沿革，相傳百年前有一劉姓民眾，前往彰化鹿港叫賣貨物，返回埔里途中拾獲一尊齊天大聖神像，便攜回家中祀奉，此後生意竟如獲神佑般暢銷興旺，進而受到庄民擁護成為地方守護神。直到民國62年(1973)才由居民籌資興建，西鎮堂始正式建廟，廟堂名諱取西遊記前往西天取經、鎮伏妖魔之典故，命名「西鎮堂」，每年農曆10月12日為齊天大聖誕辰，也是年度最熱鬧的一天。</p>
       </div>
     </div>
     <!---------阿里史區(16.烏牛欄手作巧克力花園)-------------------------->
-    <h1 class="header-section gs_reveal ipsType_center" id="16">烏牛欄手作巧克力花園</h1>
+    <h1 class="header-section gs_reveal w3-dark-grey ipsType_center" id="16"><a class="hover_1" href="https://anny3805201314.pixnet.net/blog/post/147533736-%3C%E9%81%8A%E5%8D%97%E6%8A%95%3E%E5%9F%94%E9%87%8C~%E7%83%8F%E7%89%9B%E6%AC%84%E6%89%8B%E4%BD%9C%E5%B7%A7%E5%85%8B%E5%8A%9B(%E5%A4%A2%E5%B9%BB%E5%B0%8F%E5%B1%8B)" title="痞客邦_遊南投_埔里~烏牛欄手作巧克力(夢幻小屋)">烏牛欄手作巧克力花園</a></h1>
     <div class="feature ipsSpacer_bottom_double ipsGrid ipsGrid_collapsePhone" >
       <div class="ipsGrid_span7 ipsType_right">
         <p class="gs_reveal">位於廣興紙寮的正對面，為一外表清新典雅、綠色植物環繞的一家手工巧克力店，店主人是鐵山社區的在地青年羅維振，店址原是阿公家飼養牛隻的牛舍，已有近80年歷史，經過改造後成為目前的植物園藝樣貌，煥然一新。</p>
@@ -340,85 +361,93 @@
 
       <div class="featured-image-container ipsGrid_span5 gs_reveal gs_reveal_fromRight">
         <div class="card">
-          <img width="479" src="./船山照片/烏牛欄巧克力花園_2.jpg" alt="">
+          <img width="479" src="./船山照片/烏牛欄巧克力花園_2.jpg" alt="" title="楊樸霖拍攝">
         </div>
       </div>
     </div>
     <!---------阿里史區(17.黃望家古厝)------------------------->
-    <h1 class="header-section ipsType_center" id="17">黃望家古厝</h1>
+    <h1 class="header-section gs_reveal w3-dark-grey ipsType_center" id="17">黃望家古厝</h1>
     <div class="feature ipsSpacer_bottom_double ipsGrid ipsGrid_collapsePhone" >
       <div class="featured-image-container ipsGrid_span5 gs_reveal gs_reveal_fromLeft">
         <div class="card">
-          <img width="479" src="./船山照片/黃望家古厝.jpg" alt="">
+          <img width="479" src="./船山照片/黃望家古厝.jpg" alt="" title="楊樸霖拍攝">
         </div>
       </div>
 
      <div class="ipsGrid_span7 ipsType_left">
-        <p class="gs_reveal">黃望家古宅位於愛蘭臺地，舊地名為阿里史，早期古宅興建於清代晚期，是埔里高山族埔社原住民後代「番秀才」望麒麟的宅第，後於日治大正6年(1917)的中部大地震時被震毀。現在的宅院係地震之後，聘請東勢角劉沛然匠師重建，建築風格融合漢人、平埔、東洋、西洋等多元型式，典雅素樸且瀰漫書香門第之氣息；宅第前門樓上方題字「玉衡獻瑞」，是埔里僅存的完整門樓。「番秀才」望麒麟因膝下無子，獨生女望阿參招贅漢人黃敦仁，後代以黃姓居多，稱之黃望家族。黃望家擁有愛蘭水泉的湧泉處土地，從日治時期以來即為釀造埔里知名好酒的水泉。</p>
+        <p class="gs_reveal"><a class="gs_reveal, hover_1" href="https://blog.xuite.net/apex.cheng/wretch/117812156" title="隨意窩_埔里 烏牛欄 黃家古厝">黃望家古宅</a>
+          位於愛蘭臺地，舊地名為阿里史，早期古宅興建於清代晚期，是埔里高山族埔社原住民後代「番秀才」望麒麟的宅第，後於日治大正6年(1917)的中部大地震時被震毀。</p>
+        <p class="gs_reveal">現在的宅院係地震之後，聘請東勢角劉沛然匠師重建，建築風格融合漢人、平埔、東洋、西洋等多元型式，典雅素樸且瀰漫書香門第之氣息；<b>宅第前門樓上方題字「玉衡獻瑞」，是埔里僅存的完整門樓。</b>「番秀才」望麒麟因膝下無子，獨生女望阿參招贅漢人黃敦仁，後代以黃姓居多，稱之黃望家族。黃望家擁有愛蘭水泉的湧泉處土地，從日治時期以來即為釀造埔里知名好酒的水泉。</p>
       </div>
     </div>
     <!---------阿里史區(18.紹興酒泉&洗衣亭)------------------------->
-    <h1 class="header-section ipsType_center" id="18">紹興酒泉&洗衣亭</h1>
+    <h1 class="header-section gs_reveal w3-dark-grey ipsType_center" id="18">紹興酒泉&洗衣亭</h1>
     <div class="feature ipsSpacer_bottom_double ipsGrid ipsGrid_collapsePhone" >
       <div class="ipsGrid_span7 ipsType_right">
-        <p class="gs_reveal">位於鐵山路和鐵山二巷交會處，矗立一座紹興泉的集水站，供在地人取用，此處水源即為聞名遐邇的愛蘭甘泉，是日治時期以來釀造埔里知名好酒的水源，曾經是進貢日本天皇的萬壽酒，也是戰後埔里酒廠用來釀造紹興酒、愛蘭白酒的泉脈。一壺好酒，打開愛蘭水泉的國內外知名度。然而，清冽的水質不僅用於釀酒，更有生活用途一面，在集水站對面下方台階處有一處洗衣亭，是附近婦女和孩子們最喜愛的洗衣亭之一，每日清晨和傍晚會看見婦女們手提洗衣籃、全副青蛙裝模樣下水搗衣搓揉，孩子則在身旁泡腳戲水。這個時刻與空間是非常獨特的，熟識者彼此寒暄問候、東家長西家短，好似社會支持團體的聚會，將難以名狀的情緒擊搗成歌。於是，洗完衣服的同時，也滌淨了心情。特別的是，除了女性，偶爾也有男性來此洗衣和談話。水的文化，牽動了個人、家庭與社區的連結。</p>
+        <p class="gs_reveal">位於鐵山路和鐵山二巷交會處，矗立一座紹興泉的集水站，供在地人取用，此處水源即為聞名遐邇的愛蘭甘泉，是日治時期以來釀造埔里知名好酒的水源，曾經是進貢日本天皇的萬壽酒，也是戰後埔里酒廠用來釀造紹興酒、愛蘭白酒的泉脈。一壺好酒，打開愛蘭水泉的國內外知名度。</p>
+        <p class="gs_reveal">然而，清冽的水質不僅用於釀酒，更有生活用途一面，在集水站對面下方台階處有一處洗衣亭，是附近婦女和孩子們最喜愛的洗衣亭之一，每日清晨和傍晚會看見婦女們手提洗衣籃、全副青蛙裝模樣下水搗衣搓揉，孩子則在身旁泡腳戲水。這個時刻與空間是非常獨特的，熟識者彼此寒暄問候、東家長西家短，好似社會支持團體的聚會，將難以名狀的情緒擊搗成歌。於是，洗完衣服的同時，也滌淨了心情。特別的是，除了女性，偶爾也有男性來此洗衣和談話。<b>水的文化，牽動了個人、家庭與社區的連結。</b></p>
       </div>
 
       <div class="featured-image-container ipsGrid_span5 gs_reveal gs_reveal_fromRight">
         <div class="card">
-          <img width="479" src="./船山照片/阿里史洗衣亭.jpg" alt="">
+          <img width="479" src="./船山照片/阿里史洗衣亭.jpg" alt="" title="楊樸霖拍攝">
         </div>
       </div>
     </div>
     <!-------------阿里史區(19.平埔墓碑)--------------------->
-    <h1 class="header-section ipsType_center" id="19">平埔墓碑</h1>
+    <h1 class="header-section gs_reveal w3-dark-grey ipsType_center" id="19">平埔墓碑</h1>
     <div class="feature ipsSpacer_bottom_double ipsGrid ipsGrid_collapsePhone" >
       <div class="featured-image-container ipsGrid_span5 gs_reveal gs_reveal_fromLeft">
         <div class="card">
-          <img width="479" src="./船山照片/公墓.jpg" alt=""><!---https://news.pts.org.tw/article/485474-->
+          <a href="https://news.pts.org.tw/article/485474"><img width="479" src="./船山照片/公墓.jpg" alt="" title="公視新聞網"></a><!---https://news.pts.org.tw/article/485474-->
         </div>
       </div>
 
      <div class="ipsGrid_span7 ipsType_left">
-        <p class="gs_reveal">埔里第15公墓位於烏牛欄台地的船尾一帶，公墓上的墓碑反映埔里西區一帶的族群文化特徵。安眠於此的先人很多具有平埔背景，其中又以巴宰族(Pazeh)居多。在年代稍久遠的老墓碑上，常能從墓主名諱中看到巴宰族的傳統名制，例如：潘馬吓六打必厘，這七個字的姓名中，「潘」是大清帝國給予巴宰族的賜姓，「馬吓六」是墓主本名，「打必厘」則是墓主之父親的名字，是典型原住民「親子聯名」的名制特色。</p>
+        <p class="gs_reveal">埔里第15公墓位於烏牛欄台地的船尾一帶，公墓上的墓碑反映埔里西區一帶的族群文化特徵。安眠於此的先人很多具有平埔背景，其中又以巴宰族(Pazeh)居多。<b>在年代稍久遠的老墓碑上，常能從墓主名諱中看到巴宰族的傳統名制，</b></p>
+        <p class="gs_reveal">例如：潘馬吓六打必厘，這七個字的姓名中，「潘」是大清帝國給予巴宰族的賜姓，「馬吓六」是墓主本名，「打必厘」則是墓主之父親的名字，是典型原住民「親子聯名」的名制特色。</p>
       </div>
     </div>
     <!--------------阿里史區(20.日南天后宮)------------------->
-    <h1 class="header-section ipsType_center" id="20">日南天后宮</h1>
+    <h1 class="header-section gs_reveal w3-dark-grey ipsType_center" id="20">日南天后宮</h1>
     <div class="feature ipsSpacer_bottom_double ipsGrid ipsGrid_collapsePhone" >
       <div class="ipsGrid_span7 ipsType_right">
-        <p class="gs_reveal">「日南媽」又稱為「埔里天后宮」，係清道光年間道卡斯族人(Taokas)集體移民來埔里盆地拓墾時所攜入的媽祖信仰。日南社為道卡斯族蓬山八社之一，原居地在今台中大甲附近。道光年間有進來埔里開墾的道卡斯族村社有：大甲社、日南社、日北社、吞宵社、雙尞社、房里社等社，集中在埔里盆地的西側一帶。媽祖信仰與捕魚及海運商旅有關，原屬海神崇拜，但是平埔族人移墾埔里時，也攜帶媽祖的香火或神像進入內山，希望得到媽祖庇佑，得以免於受到原住民出草馘首的禍難。民國106年(2017)日南媽（埔里天后宮）的遶境廟會活動以「環保」做為主要訴求，呼籲信眾不焚香、不燒金紙、不放鞭炮、不使用一次性餐具等，開風氣之先，受到媒體輿論矚目而知名度大增，廣獲社會大眾好評。</p>
+        <p class="gs_reveal">「日南媽」又稱為「埔里天后宮」，係清道光年間道卡斯族人(Taokas)集體移民來埔里盆地拓墾時所攜入的媽祖信仰。日南社為道卡斯族蓬山八社之一，原居地在今台中大甲附近。</p>
+          <p class="gs_reveal">道光年間有進來埔里開墾的道卡斯族村社有：大甲社、日南社、日北社、吞宵社、雙尞社、房里社等社，集中在埔里盆地的西側一帶。媽祖信仰與捕魚及海運商旅有關，原屬海神崇拜，但是平埔族人移墾埔里時，也攜帶媽祖的香火或神像進入內山，希望得到媽祖庇佑，得以免於受到原住民出草馘首的禍難。民國106年(2017)日南媽（埔里天后宮）的
+            <a class="gs_reveal, hover_1" href="https://news.ltn.com.tw/news/local/paper/1278148" title="埔里天后宮北港朝天宮 雙媽遶境">遶境廟會</a>活動以<b>「環保」做為主要訴求，呼籲信眾不焚香、不燒金紙、不放鞭炮、不使用一次性餐具等，開風氣之先，受到媒體輿論矚目而知名度大增，廣獲社會大眾好評。</b></p>
       </div>
 
       <div class="featured-image-container ipsGrid_span5 gs_reveal gs_reveal_fromRight">
         <div class="card">
-          <img width="479" src="./船山照片/日南天后宮.jpg" alt="">
+          <img width="479" src="./船山照片/日南天后宮.jpg" alt="" title="楊樸霖拍攝">
         </div>
       </div>
     </div>
     <!------------阿里史區(21.天雷宮)--------------------->
-    <h1 class="header-section ipsType_center" id="21">天雷宮</h1>
+    <h1 class="header-section gs_reveal w3-dark-grey ipsType_center" id="21">天雷宮</h1>
     <div class="feature ipsSpacer_bottom_double ipsGrid ipsGrid_collapsePhone" >
       <div class="featured-image-container ipsGrid_span5 gs_reveal gs_reveal_fromLeft">
         <div class="card">
-          <img width="479" src="./船山照片/天雷宮.jpg" alt="">
+          <img width="479" src="./船山照片/天雷宮.jpg" alt="" title="楊樸霖拍攝">
         </div>
       </div>
 
       <div class="ipsGrid_span7 ipsType_left">
-        <p class="gs_reveal">位於愛蘭台地三勰路八股聚落的天雷宮，主祀雷神(雷公)，原本係供奉於聚落內民宅的家神，後來才由庄人集資興建廟宇，正式建廟的時間並不久遠。從樂捐建廟的名單中可以發現頗多潘姓、陳姓、林姓之樂捐者，他們大都為週邊社區的平埔族人後裔，因為本廟具有地域性，推測可能是平埔族人從西部平原帶進埔里的崇拜神。現今埔里鎮西側的村里，如房里里、向善里均為道卡斯族人(Taokas)所創建，此由民間開墾契約中出現的社名可略知一二。</p>
+        <p class="gs_reveal">位於愛蘭台地三勰路八股聚落的
+          <a class="gs_reveal, hover_1" href="https://memory.culture.tw/Home/Detail?Id=217477&IndexCode=Culture_Place" title="文化部國家文化記憶庫_天雷宮">天雷宮</a>，<b>主祀雷神(雷公)</b>，原本係供奉於聚落內民宅的家神，後來才由庄人集資興建廟宇，正式建廟的時間並不久遠。從樂捐建廟的名單中可以發現頗多潘姓、陳姓、林姓之樂捐者，他們大都為週邊社區的平埔族人後裔，因為本廟具有地域性，推測可能是平埔族人從西部平原帶進埔里的崇拜神。</p>
+        <p class="gs_reveal">現今埔里鎮西側的村里，如房里里、向善里均為道卡斯族人(Taokas)所創建，此由民間開墾契約中出現的社名可略知一二。</p>
       </div>
     </div>
         <!----------阿里史區(22.船尾—地質露頭)------------------------->
-    <h1 class="header-section ipsType_center" id="22">船尾—地質露頭</h1>
+    <h1 class="header-section gs_reveal w3-dark-grey ipsType_center" id="22">船尾—地質露頭</h1>
     <div class="feature ipsSpacer_bottom_double ipsGrid ipsGrid_collapsePhone" >
       <div class="ipsGrid_span7 ipsType_right">
-        <p class="gs_reveal">地質露頭，是判斷岩層在長時間大地作用之下的遺跡，能瞭解不同岩石種類之間的接觸關係，據以觀察地質構造。從地質露頭所收集的各類岩層資料，可推論附近地區岩石的可能組成方式與岩盤結構，掌握土地生成的歷史。愛蘭台地上的地質露頭，是台地被南烘溪長期侵蝕沖刷後所留下來的斷面，透過層層疊疊的石頭和沙石堆積分布，能清楚了解愛蘭台地的原始岩層構造，為一難得肉眼可見的地理資訊系統。</p>
+        <p class="gs_reveal">地質露頭，<b>是判斷岩層在長時間大地作用之下的遺跡，能瞭解不同岩石種類之間的接觸關係，據以觀察地質構造。</b>從地質露頭所收集的各類岩層資料，可推論附近地區岩石的可能組成方式與岩盤結構，掌握土地生成的歷史。愛蘭台地上的地質露頭，是台地被南烘溪長期侵蝕沖刷後所留下來的斷面，透過層層疊疊的石頭和沙石堆積分布，能清楚了解愛蘭台地的原始岩層構造，為一難得肉眼可見的地理資訊系統。</p>
       </div>
 
       <div class="featured-image-container ipsGrid_span5 gs_reveal gs_reveal_fromRight">
         <div class="card">
-          <img width="479" src="./船山照片/桶頭橋觸口斷層露頭.jpg" alt=""><!--http://140.112.63.111/ctlee/page02/02sight120.html-->
+          <a href="http://140.112.63.111/ctlee/page02/02sight120.html"><img width="479" src="./船山照片/桶頭橋觸口斷層露頭.jpg" alt="" title="桶頭橋觸口斷層露頭"></a><!--http://140.112.63.111/ctlee/page02/02sight120.html-->
         </div>
       </div>
     </div>
@@ -451,6 +480,10 @@
   </div>
 </div>
 
+<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+  integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+  crossorigin=""></script>
+<script src="./report_js.js"></script>
 <!-- Footer -->
 <footer class="w3-center w3-black w3-padding-64">
   <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
@@ -542,4 +575,5 @@ function check(y){
 
 </body>
 </html>
+
 
