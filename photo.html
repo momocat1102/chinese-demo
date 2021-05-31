@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<title>PHOTO</title>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="./report_css.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+  <script src="./report_js.js"></script>
+</head>
+
+<body  style="
+  background-image: url(./相簿照片/大馬璘/愛蘭教會.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;"
+  class="w3-light-gray">
+  <!-- Navbar (sit on top) -->
+  <div class="w3-top">
+    <div class="w3-bar w3-white w3-card" id="myNavbar">
+      <a href="./report.html" class="w3-bar-item w3-button w3-wide"><i class="fa fa-rotate-left"></i>返回</a>
+      <div class="w3-right w3-hide-small">
+        <div class="w3-dropdown-hover w3-hide-small">
+          <button class="w3-button" title="Notifications"><i class="fa fa-university"></i>地區<i
+              class="fa fa-caret-down"></i></button>
+          <div class="w3-dropdown-content w3-card-4 w3-bar-block">
+            <a href="#1" class="w3-bar-item w3-button">南村區</a>
+            <a href="#2" class="w3-bar-item w3-button">大馬璘與烏牛欄區</a>
+            <a href="#3" class="w3-bar-item w3-button">阿里史區</a>
+          </div>
+        </div>
+      </div>
+      <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+      <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium"
+        onclick="w3_open()">
+        <i class="fa fa-bars"></i>
+      </a>
+
+    </div>
+    <!-- Sidebar on small screens when clicking the menu icon -->
+  <nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large"
+  style="display:none" id="mySidebar" onclick="w3_close()" >
+  <a href="#1"  class="w3-bar-item w3-button">南村區</a>
+  <a href="#2"  class="w3-bar-item w3-button">大馬璘與烏牛欄區</a>
+  <a href="#3"  class="w3-bar-item w3-button">阿里史區</a>
+ 
+</nav>
+  </div>
+
+  
+  <!-------------------------------------------主頁------------------------------------------------------->
+  
+      <!-------------南村區(1.烏牛欄橋)--------------------->
+      <div onclick="w3_close()">
+        <h1 class="header-section ipsType_center" id="1"><a target="_blank">南村區</a></h1>
+      <div  class="photo2 ipsType_center">
+        <div class="photo short_photo ">
+          <img width="479" src="./相簿照片/南村/愛蘭戰役紀念碑.jpg" alt="">
+          <img width="479" src="./相簿照片/南村/愛蘭橋.jpg" alt="">
+          <img width="479" src="./相簿照片/南村/木生昆蟲博物館.jpg" alt="">
+          <img width="479" src="./相簿照片/南村/牛耳石雕公園（牛相觸堤防）.jpg" alt="">
+        </div>
+      </div>
+      <!--------------大馬璘與烏牛欄區------------------->
+      <h1 class="header-section ipsType_center" id="2">大馬璘與烏牛欄區</h1>
+
+      <div class="photo2 ipsType_center ">
+        <div class="short_photo photo ">
+          <img width="479" src="./相簿照片/大馬璘/暨大附中.jpg" alt="">
+          <img width="479" src="./相簿照片/大馬璘/醒靈寺.jpg" alt="">
+          <img width="479" src="./相簿照片/大馬璘/醒靈寺_2.jpg" alt="">
+          <img width="479" src="./相簿照片/大馬璘/埔里長老教會.jpg" alt="">
+          <img width="479" src="./相簿照片/大馬璘/大瑪璘遺址.jpg" alt="">
+        </div>
+        <div class="Long_photo photo ipsType_center">
+          <img width="479" height="650" src="./相簿照片/大馬璘/埔里基督教醫院.jpg" alt="">
+          <img width="479" height="650"src="./相簿照片/大馬璘/愛蘭教會.jpg" alt="">
+        </div>
+      </div>
+      <!------------南村區(3.木生昆蟲博物館)--------------------->
+      <h1 class="header-section ipsType_center" id="3">阿里史區</h1>
+      <div class="photo2  ipsType_center"> 
+        <div class="short_photo photo">
+          <img width="479" src="./相簿照片/阿里史/天雷宮.jpg" alt="">
+          <img width="479" src="./相簿照片/阿里史/廣興右.jpg" alt="">
+          <img width="479" src="./相簿照片/阿里史/廣興紙寮.jpg" alt="">
+          <img width="479" src="./相簿照片/阿里史/日南天后宮.jpg" alt="">
+          <img width="479" src="./相簿照片/阿里史/烏牛欄巧克力工房.jpg" alt="">
+          <img width="479" src="./相簿照片/阿里史/烏牛欄巧克力工房2.jpg" alt="">
+          <img width="479" src="./相簿照片/阿里史/烏牛欄巧克力花園.jpg" alt="">
+          <img width="479" src="./相簿照片/阿里史/西鎮堂.jpg" alt="">
+          <img width="479" src="./相簿照片/阿里史/阿里史洗衣亭.jpg" alt="">
+          <img width="479" src="./相簿照片/阿里史/阿里史洗衣亭_2.jpg" alt="">
+          <img width="479" src="./相簿照片/阿里史/黃望家古厝.jpg" alt="">
+        </div>    
+        <div class="photo Long_photo ">
+          <img width="479" src="./相簿照片/阿里史/紹興泉.jpg" alt="">
+        </div>
+      </div>
+      </div>
+      
+
+</body>
+
+<!-- Footer -->
+<footer class="w3-center w3-white w3-padding-64">
+  <a href="#1" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  <div>
+    <P>聯絡我們: leegun047@gmail.com oyj674@gmail.com</p>
+  </div>
+  <div>
+    <i class="w3-xlarge w3-section">以上介紹皆來自: <a
+        href="https://onedrive.live.com/view.aspx?resid=DF69ADC7EB2CF6B1!2532&ithint=file%2cdocx&authkey=!ADp_PJsW8m5CxIQ"
+        title="https://onedrive.live.com/view.aspx?resid=DF69ADC7EB2CF6B1!2532&ithint=file%2cdocx&authkey=!ADp_PJsW8m5CxIQ"
+        target="_blank" class="w3-hover-text-green">船山22景點解說文</a></i>
+    <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank"
+        class="w3-hover-text-green">w3.css</a></p>
+  </div>
+</footer>
+
+<script>
+  // Modal Image Gallery
+  function onClick(element) {
+    document.getElementById("img01").src = element.src;
+    document.getElementById("modal01").style.display = "block";
+    var captionText = document.getElementById("caption");
+    captionText.innerHTML = element.alt;
+  }
+
+
+  // Toggle between showing and hiding the sidebar when clicking the menu icon
+  var mySidebar = document.getElementById("mySidebar");
+
+  function w3_open() {
+    if (mySidebar.style.display === 'block') {
+      mySidebar.style.display = 'none';
+    } else {
+      mySidebar.style.display = 'block';
+    }
+  }
+
+  // Close the sidebar with the close button
+  function w3_close() {
+    mySidebar.style.display = "none";
+  }
+
+  function myAccFunc1() {
+    var x = document.getElementById("demo1");
+    if (x.className.indexOf("w3-show") == -1) {
+      x.className += " w3-show";
+    } else {
+      x.className = x.className.replace(" w3-show", "");
+    }
+  }
+
+  
+  
+</script>
+
+</html>
