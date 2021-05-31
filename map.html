@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>88</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-12/css/all.min.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+    crossorigin=""/>
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.4.1/MarkerCluster.css"></link> 
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.4.1/MarkerCluster.Default.css"></link> 
+    <link rel="stylesheet" href="./test3_css.css">
+    <style>
+      #map {
+    height: 80%; width: 80%;
+    }
+    body{
+      margin: 0;
+    }
+    </style>
+</head>
+<body>
+  <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+  integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+  crossorigin=""></script>
+  
+      <div id="map"></div>
+
+
+
+
+
+  <script>
+    var map = L.map('map').setView([23.969764, 120.938401], 15);
+
+L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+  maxZoom: 18,
+  attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, ' +
+    'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+  id: 'mapbox/streets-v11',
+  tileSize: 512,
+  zoomOffset: -1
+}).addTo(map);
+  var marker1 = L.marker([23.967048549216237, 120.94636656371216]).addTo(map);//烏牛欄橋*
+  var marker2 = L.marker([23.966396595711032, 120.94640947905572]).addTo(map);//烏牛欄戰役紀念碑*
+  var marker3 = L.marker([23.964478568287294, 120.94535215501233]).addTo(map);//木生昆蟲博物館*
+  var marker4 = L.marker([23.96652758440399, 120.94474061136678]).addTo(map);//牛耳石雕公園*
+  var marker5 = L.marker([23.973901, 120.933402]).addTo(map);//南村里義民祠*
+  var marker6 = L.marker([23.967798, 120.946105]).addTo(map);//醒靈寺*
+  var marker7 = L.marker([23.969374174975307, 120.9451624685048]).addTo(map);//大馬璘遺址公園*
+  var marker8 = L.marker([23.970731597091817, 120.94629142644368]).addTo(map);//埔里基督教醫院*
+  var marker9 = L.marker([23.972070976694273, 120.94600691083306]).addTo(map);//暨大附中*
+  var marker10 = L.marker([23.97188917019083, 120.94748089734075]).addTo(map);//埔基長照中心*
+  var marker11 = L.marker([23.974129375733973, 120.94403491268434]).addTo(map);//愛蘭國小*
+  var marker12 = L.marker([23.970836154614314, 120.94372439734076]).addTo(map);//梅村社造土角胖*
+  var marker13 = L.marker([23.975685127958364, 120.94112041745808]).addTo(map);//烏牛欄教會*
+  var marker14 = L.marker([23.975528, 120.938659]).addTo(map);//廣興紙寮*
+  var marker15 = L.marker([23.97650035524517, 120.93900908199737]).addTo(map);//西鎮堂*
+  var marker16 = L.marker([23.97616651855373, 120.93902558384855]).addTo(map);//烏牛欄手作巧克力花園*
+  var marker17 = L.marker([23.976358155906258, 120.93907550531344]).addTo(map);//黃望家古厝*
+  var marker18 = L.marker([23.976006934266675, 120.9378292108332]).addTo(map);//紹興酒泉&洗衣亭*
+  var marker19 = L.marker([23.97187868923758, 120.92585640580386]).addTo(map);//平埔墓碑*
+  var marker20 = L.marker([23.976659051894384, 120.94098648199723]).addTo(map);//日南天后宮*
+  var marker21 = L.marker([23.9820125322742, 120.9316252838487]).addTo(map);//天雷宮*
+  var marker22 = L.marker([23.978136, 120.932608]).addTo(map);//船尾—地質露頭
+  marker1.bindPopup("<b>烏牛欄橋</b>").openPopup();
+  marker2.bindPopup("<b>烏牛欄戰役紀念碑</b>").openPopup();
+  marker3.bindPopup("<b>木生昆蟲博物館</b>").openPopup();
+  marker4.bindPopup("<b>牛耳石雕公園</b>").openPopup();
+  marker5.bindPopup("<b>南村里義民祠</b>").openPopup();
+  marker6.bindPopup("<b>醒靈寺</b>").openPopup();
+  marker7.bindPopup("<b>大馬璘遺址公園</b>").openPopup();
+  marker8.bindPopup("<b>埔里基督教醫院</b>").openPopup();
+  marker9.bindPopup("<b>暨大附中</b>").openPopup();
+  marker10.bindPopup("<b>埔基長照中心</b>").openPopup();
+  marker11.bindPopup("<b>愛蘭國小</b>").openPopup();
+  marker12.bindPopup("<b>梅村社造土角胖</b>").openPopup();
+  marker13.bindPopup("<b>烏牛欄教會</b>").openPopup();
+  marker14.bindPopup("<b>廣興紙寮</b>").openPopup();
+  marker15.bindPopup("<b>西鎮堂</b>").openPopup();
+  marker16.bindPopup("<b>烏牛欄手作巧克力花園</b>").openPopup();
+  marker17.bindPopup("<b>黃望家古厝</b>").openPopup();
+  marker18.bindPopup("<b>紹興酒泉&洗衣亭</b>").openPopup();
+  marker19.bindPopup("<b>平埔墓碑</b>").openPopup();
+  marker20.bindPopup("<b>日南天后宮</b>").openPopup();
+  marker21.bindPopup("<b>天雷宮</b>").openPopup();
+  marker22.bindPopup("<b>船尾—地質露頭</b>").openPopup();
+
+  var popup = L.popup();
+//點擊可得座標
+function onMapClick(e) {
+    popup
+        .setLatLng(e.latlng)
+        .setContent("目前座標為：" + e.latlng.toString())
+        .openOn(map);
+}
+
+map.on('click', onMapClick);
+  </script>
+  
+</body>
+</html>
