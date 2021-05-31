@@ -60,7 +60,6 @@ var colors = new Array(
   setInterval(updateGradient,10);
 
 
-
   //<------------------------------------------------------------------------------------------------>//
   function animateFrom(elem, direction) {
     direction = direction || 1;
