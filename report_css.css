@@ -37,6 +37,22 @@ body, html {
   100% {background: red; left: 0px; top: 0px;}
 }
 
+.map_1{
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+input{border:0;
+  background-color:#003C9D;
+  color:#fff;
+  border-radius:10px;
+  cursor:pointer;}
+
+input:hover{
+  color:#003C9D;
+  background-color:#fff;
+  border:2px #003C9D solid;
+}
 
 .w3-bar .w3-button {
   padding: 16px;
@@ -94,6 +110,7 @@ body, html {
   .card {
     width: 100%;
     height: 100%;
+
     margin-bottom: 30px;
     border: 1px solid #cccccc;
     border-radius: 8px;
@@ -169,6 +186,7 @@ body, html {
     height: 80%; width: 80%;
   }
   @media screen and (max-width:800px){
+
     .header-section {
       margin: 30px auto;
     }
@@ -219,7 +237,7 @@ body, html {
     .card {
       width: 150%;
       height: 150%;
-      margin-bottom: 30px;
+      /* margin-bottom: 30px; */
       border: 1px solid #cccccc;
       border-radius: 8px;
       overflow:visible;
@@ -228,5 +246,6 @@ body, html {
     /*   transition: 0.3s; */
     }
   }
+  
   
   
