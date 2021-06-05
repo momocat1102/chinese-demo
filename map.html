@@ -186,7 +186,7 @@ map.on('locationfound', onLocationFound);
 
 function onLocationError(e) {
 	console.log(e);
-  window.alert('無法判斷您的所在位置，無法使用此功能。');
+  window.alert('無法判斷您的所在位置，故無法顯示目前位置。');
   map.flyTo([23.974094, 120.937539]);
 }
 
