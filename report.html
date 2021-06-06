@@ -116,14 +116,45 @@
 </nav>
 
 <!-- map -->
-<div id="home">
-<div class="w3-dropdown-hover w3-light-gray ipsType_center map_3">
-  <button class="wei-button" onclick="my_close()">地圖開關</button>
-  <a href="" class="wei-button2">重整地圖</a>
-</div>
-</div>
-<div id="mymap" class="container ipsType_center map_1">
-    <iframe  src="https://momocat1102.github.io/chinese-demo/map.html" width="100%" height="80%" frameborder="0" scrolling="no"></iframe>
+
+<div id="home" class="container ipsType_center map_1">
+  <div class="w3-dropdown-hover w3-light-gray ipsType_center map_3">
+    <button class="wei-button" onclick="my_change()">切換</button>
+    <a href="" class="wei-button2">重整地圖</a>
+  </div>
+  <div id="myphoto" style="display: none;" class="slider_container">
+    <div>
+     <img src="./相簿照片/南村/愛蘭戰役紀念碑.jpg" alt="pure css3 slider" class="photo_pc" />
+     <img src="./船山照片/醒靈寺.jpg" alt="pure css3 slider" class="photo_phone" />
+     <span class="photo_pc">愛蘭戰役紀念碑</span>
+     <span class="photo_phone">醒靈寺</span>
+    </div>
+    <div>
+      <img src="./相簿照片/南村/愛蘭橋.jpg" alt="pure css3 slider" class="photo_pc"/>
+      <img src="./船山照片/愛蘭教會.jpg" alt="pure css3 slider" class="photo_phone" />
+      <span class="photo_pc">愛蘭橋</span>
+      <span class="photo_phone">愛蘭教會</span>
+    </div>
+    <div>
+      <img src="./相簿照片/阿里史/日南天后宮.jpg" alt="pure css3 slider" class="photo_pc" />
+      <img src="./船山照片/紹興泉.jpg" alt="pure css3 slider" class="photo_phone" />
+      <span class="photo_pc">日南天后宮</span>
+      <span class="photo_phone">紹興泉</span>
+    </div>
+    <div>
+      <img src="./相簿照片/南村/牛耳石雕公園（牛相觸堤防）.jpg" alt="pure css3 slider" class="photo_pc"/>
+      <img src="./船山照片/黃望家古厝.jpg" alt="pure css3 slider"  class="photo_phone"/>
+      <span class="photo_pc">牛耳石雕公園</span>
+     <span class="photo_phone">黃望家古厝</span>
+    </div>
+   <div>
+      <img src="./相簿照片/阿里史/烏牛欄巧克力花園_2.jpg" alt="pure css3 slider" class="photo_pc"/>
+      <img src="./船山照片/愛蘭戰役紀念碑.jpg" alt="pure css3 slider" class="photo_phone"/>
+      <span class="photo_pc">烏牛欄巧克力花園</span>
+      <span class="photo_phone">愛蘭戰役紀念碑</span>
+    </div>
+  </div>
+    <iframe id="mymap" style="display: block;" src="https://momocat1102.github.io/chinese-demo/map.html" width="100%" height="80%" frameborder="0" scrolling="no"></iframe>
 
 </div>
 
@@ -508,11 +539,13 @@ function w3_open() {
 function w3_close() {
   mySidebar.style.display = 'none';
 }
-function my_close(){
-  if (mymap.style.display === 'block') {
+function my_change(){
+  if (myphoto.style.display == 'none' || mymap.style.display == 'block') {
+    myphoto.style.display = 'block';
     mymap.style.display = 'none';
   } else {
     mymap.style.display = 'block';
+    myphoto.style.display = 'none';
   }
 }
 function myAccFunc1() {
@@ -566,6 +599,7 @@ function check(y){
 
 </body>
 </html>
+
 
 
 
