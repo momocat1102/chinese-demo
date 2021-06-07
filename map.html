@@ -44,6 +44,8 @@ var style1 = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 var map = L.map('map', {
 		center: [23.974094, 120.937539],
 		zoom: 15,
+    zoomDelta: 0.25,
+    zoomSnap: 0.25,
 		layers: [style1, layer0]
 	});
 map.locate({
@@ -57,7 +59,7 @@ map.locate({
 var marker1 = L.marker([23.967002, 120.946504]).bindPopup("<b>烏牛欄橋</b>").addTo(layer1).addTo(layer0).addTo(myposition);//烏牛欄橋*
 marker1.on('click', function(e) {
   console.log(e);
-  map.flyTo([23.967002, 120.946504])
+  map.flyTo([23.967002, 120.946504]);
 })
 var marker2 = L.marker([23.966369, 120.946472]).bindPopup("<b>烏牛欄戰役紀念碑</b>").addTo(layer1).addTo(layer0).addTo(myposition);//烏牛欄戰役紀念碑*
 marker2.on('click', function(e) {
@@ -78,6 +80,7 @@ var marker5 = L.marker([23.973901, 120.933402]).bindPopup("<b>南村里義民祠
 marker5.on('click', function(e) {
   console.log(e);
   map.flyTo([23.973901, 120.933402])
+
 })
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -168,7 +171,6 @@ marker22.on('click', function(e) {
   console.log(e);
   map.flyTo([23.977627, 120.93354])
 })
-
 function onLocationFound(e) {
 		var radius = e.accuracy / 2;
 
