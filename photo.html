@@ -18,53 +18,42 @@
   <link href="https://unpkg.com/nanogallery2/dist/css/nanogallery2.min.css" rel="stylesheet" type="text/css">
   </link>
   <script type="text/javascript" src="https://unpkg.com/nanogallery2/dist/jquery.nanogallery2.min.js"></script>
-  <script src="./photo_js.js"></script>
 </head>
 
-<body style="background-image: url(./相簿照片/南村/牛相處河堤長廊.jpg);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
-  background-size: cover;"
-  class="w3-light-gray">
-  <div class="w3-top">
-    <div class="w3-bar w3-white w3-card" id="myNavbar">
-      
+<body class="w3-light-gray"
+      style="background-image: url(./相簿照片/南村/牛相處河堤長廊.jpg);
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-position: center;
+      background-size: cover;">
+
+  
+    <div class="w3-bar w3-white w3-card" id="myNavbar">    
       <a href="./report.html"class="w3-bar-item w3-button w3-wide" style="position: fixed;"><i class="fa fa-rotate-left"></i>返回</a>
-      <!-- Hide right-floated links on small screens and replace them with a menu icon -->
-
-      <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium"
-        onclick="w3_open()">
-        <i class="fa fa-bars"></i>
-      </a>
-
     </div>
-    <!-- Sidebar on small screens when clicking the menu icon -->
-    <nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large"
-      style="display:none" id="mySidebar" onclick="w3_close()">
-      <a href="#1" class="w3-bar-item w3-button">南村區</a>
-      <a href="#2" class="w3-bar-item w3-button">大馬璘與烏牛欄區</a>
-      <a href="#3" class="w3-bar-item w3-button">阿里史區</a>
 
-    </nav>
-  </div>
-
-
-  <!-------------------------------------------主頁------------------------------------------------------->
 
   <!-------------南村區(1.烏牛欄橋)--------------------->
-  <div onclick="w3_close()" style="padding-left: 20px; padding-right: 20px;">
-    <h1 style="font-weight: bolder;" class="header-section ipsType_center" id="1"><a target="_blank">南村區</a></h1>
-    <div  id="nanogallery1"></div>
+  <div style="padding-left: 20px; padding-right: 20px;">
+
+    <div id="Bg1" onclick="BG1()">
+      <h1 style="font-weight: bolder;" class="header-section ipsType_center" id="1"><a target="_blank">南村區</a></h1>
+      <div id="nanogallery1"></div>
+    </div>
+
     <!--------------大馬璘與烏牛欄區------------------->
 
-    <h1 style="font-weight: bolder;"class="header-section ipsType_center" id="2">大馬璘與烏牛欄區</h1>
-    <div id="nanogallery2"></div>
+    <div id="Bg2">
+      <h1  style="font-weight: bolder;"class="header-section ipsType_center" id="2">大馬璘與烏牛欄區</h1>
+      <div id="nanogallery2"></div>
+    </div>
 
     <!------------南村區(3.木生昆蟲博物館)--------------------->
+    <div id="Bg3">
+      <h1 style="font-weight: bolder;"class="header-section ipsType_center" id="3">阿里史區</h1>
+      <div id="nanogallery3"></div>
+    </div>
 
-    <h1 style="font-weight: bolder;"class="header-section ipsType_center" id="3">阿里史區</h1>
-    <div id="nanogallery3"></div>
   </div>
 
 
@@ -77,59 +66,40 @@
     <P>聯絡我們: leegun047@gmail.com oyj674@gmail.com</p>
   </div>
   <div>
-    <i class="w3-xlarge w3-section">以上介紹皆由楊樸霖所拍攝，地點來自： <a
+    <i class="w3-xlarge w3-section">以上照片皆由楊樸霖所拍攝，地點來自： <a
         href="https://onedrive.live.com/view.aspx?resid=DF69ADC7EB2CF6B1!2532&ithint=file%2cdocx&authkey=!ADp_PJsW8m5CxIQ"
         title="https://onedrive.live.com/view.aspx?resid=DF69ADC7EB2CF6B1!2532&ithint=file%2cdocx&authkey=!ADp_PJsW8m5CxIQ"
         target="_blank" class="w3-hover-text-green">船山22景點解說文</a></i>
     <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank"
-        class="w3-hover-text-green">w3.css</a></p>
+        class="w3-hover-text-green">w3.css,</a><a class="w3-hover-text-green" href="https://nanogallery2.nanostudio.org/documentation.html"> nanogallery2</a></p>
   </div>
 </footer>
 
 <script>
-  // Modal Image Gallery
-  function onClick(element) {
-    document.getElementById("img01").src = element.src;
-    document.getElementById("modal01").style.display = "block";
-    var captionText = document.getElementById("caption");
-    captionText.innerHTML = element.alt;
+  $("#Bg1").hover(BG1);
+  $("#Bg2").hover(BG2);
+  $("#Bg3").hover(BG3);
+  function BG1(){
+    document.body.style.backgroundImage="url(./相簿照片/南村/牛相處河堤長廊.jpg)";
+    document.body.style.webkitTransition= "1s"
   }
-
-
-  // Toggle between showing and hiding the sidebar when clicking the menu icon
-  var mySidebar = document.getElementById("mySidebar");
-
-  function w3_open() {
-    if (mySidebar.style.display === 'block') {
-      mySidebar.style.display = 'none';
-    } else {
-      mySidebar.style.display = 'block';
-    }
+  function BG2(){
+    document.body.style.backgroundImage="url(./相簿照片/大馬璘/大瑪璘遺址.jpg)";
+    document.body.style.webkitTransition= "1s";
   }
-
-  // Close the sidebar with the close button
-  function w3_close() {
-    mySidebar.style.display = "none";
-  }
-
-  function myAccFunc1() {
-    var x = document.getElementById("demo1");
-    if (x.className.indexOf("w3-show") == -1) {
-      x.className += " w3-show";
-    } else {
-      x.className = x.className.replace(" w3-show", "");
-    }
+  function BG3(){
+    document.body.style.backgroundImage="url(./相簿照片/阿里史/日南天后宮.jpg)";
+    document.body.style.webkitTransition= "1s"
   }
 
   $("#nanogallery1").nanogallery2({
     thumbnailHeight: 300,
     thumbnailWidth: "auto",
-
     thumbnailGutterWidth: 15,
     thumbnailGutterHeight: 15,
     thumbnailBorderHorizontal: 0,
     thumbnailBorderVertical: 0,
-    thumbnailHoverEffect2: "scale120",
+    thumbnailHoverEffect2: "image_scale_1.00_1.20_3500|image_rotateZ_0deg_5deg_3500",
     thumbnailLabel: {
       display: true
     },
@@ -157,10 +127,6 @@
       src: "./相簿照片/南村/牛耳石雕公園（牛相觸堤防）.jpg",
       srct: "./相簿照片/南村/牛耳石雕公園（牛相觸堤防）.jpg",
       title: "牛耳石雕公園(牛相觸堤防)"
-    }, {
-      src: "./相簿照片/大馬璘/暨大附中.jpg",
-      srct: "./相簿照片/大馬璘/暨大附中.jpg",
-      title: "暨大附中"
     },] 
   });
   $("#nanogallery2").nanogallery2({
@@ -171,7 +137,7 @@
     thumbnailGutterHeight: 15,
     thumbnailBorderHorizontal: 0,
     thumbnailBorderVertical: 0,
-    thumbnailHoverEffect2: "scale120",
+    thumbnailHoverEffect2: "image_scale_1.00_1.20_3500|image_rotateZ_0deg_5deg_3500",
     thumbnailLabel: {
       display: true
     },
@@ -213,22 +179,22 @@
     thumbnailGutterHeight: 15,
     thumbnailBorderHorizontal: 0,
     thumbnailBorderVertical: 0,
-    thumbnailHoverEffect2: "scale120",
+    thumbnailHoverEffect2: "image_scale_1.00_1.20_3500|image_rotateZ_0deg_5deg_3500",
     thumbnailLabel: {
       display: true
     },
     items: [{
       src: "./相簿照片/阿里史/廣興右.jpg",
       srct: "./相簿照片/阿里史/廣興右.jpg",
-      title: "廣興右"
+      title: "廣興紙寮_1"
     }, {
       src: "./相簿照片/阿里史/廣興左.jpg",
       srct: "./相簿照片/阿里史/廣興左.jpg",
-      title: "廣興左"
+      title: "廣興紙寮_2"
     }, {
       src: "./相簿照片/阿里史/廣興紙寮.jpg",
       srct: "./相簿照片/阿里史/廣興紙寮.jpg",
-      title: "廣興紙寮"
+      title: "廣興紙寮_3"
     }, {
       src: "./相簿照片/阿里史/德恩堂.jpg",
       srct: "./相簿照片/阿里史/德恩堂.jpg",
